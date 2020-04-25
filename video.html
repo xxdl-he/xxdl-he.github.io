@@ -1,0 +1,129 @@
+<!DOCTYPE html><html><head>
+<style>
+{  
+            margin: 0px;  
+            padding: 0px;  
+        }  
+        video{  
+            position: fixed;  
+            right: 0px;  
+            bottom: 0px;  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/  
+            /*filter:grayscale(100%); //背景灰度设置*/  
+            z-index:-11
+        }  
+        source{  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+        } 
+div {
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight: 100;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 2rem;
+    width: 33%;
+    margin: 2rem;
+    float: right;
+    font-size: 1.2rem;
+}
+h1 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: .1.7rem;
+}
+a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+    transition: .6s background;
+}
+a:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+@media screen and (max-width: 500px) {
+    div {
+        width: 70%;
+    }
+}
+@media screen and (max-device-width: 800px) {
+    #bgvid {
+        display: none;
+    }
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+<script type="text/javascript" src="https://wow.techbrood.com/libs/jquery/jquery-2.1.1.min.js"></script>
+  <video id="v1" autoplay loop>
+              <source src="http://q8vy4bw41.bkt.clouddn.com/bg.mp4" type="video/mp4"  />
+        </video>
+<div id="polina">
+    <h1 id="jsq">Demo</h1>
+    <p>Created by 205004</p><a href="/">Back to index.</a>
+</div>
+<script>
+ document.documentElement.className = "js";
+            var supportsCssVars = function() {
+                var e, t = document.createElement("style");
+                return t.innerHTML = "root: { --tmp-var: bold; }",
+                document.head.appendChild(t),
+                e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")),
+                t.parentNode.removeChild(t),
+                e
+            };
+            supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+        </script>
+        <script type="text/javascript">
+            window.onload = countdown;
+            function countdown() {
+                //获取客户端时间
+                var today = new Date();
+                //获取服务器当前时间 var today=new Date($.ajax({type:"HEAD",async:false,cache:false}).getResponseHeader("Date"));
+                //当前距离1970年的毫秒数
+                var oldTime = today.getTime();
+                var newDate = new Date(2020,6,23,09,00,0);
+                //截止时间距离1970年的毫秒数
+                var newTime = newDate.getTime();
+
+                //截止时间距离现在的秒数
+                var second = Math.floor((newTime - oldTime) / 1000);
+                //设置remainSecond的目的是：如果倒计时结束该执行的方法或事件
+                var remainSecond = second;
+                //86400代表的是天；一天有24*60*60=86400秒 ；
+                var day = Math.floor(second / 86400);
+                second %= 86400;
+                //余数代表剩下的秒数；
+                var hour = Math.floor(second / 3600);
+                //3600代表小时；
+                second %= 3600;
+                //余数代表 剩下的秒数；
+                var minute = Math.floor(second / 60);
+                second %= 60;
+                var str = formatType(day) + '<span class="time">Days</span>' + formatType(hour) + '<span class="time">Hours</span>' + formatType(minute) + '<span class="time">Mins</span>' + formatType(second) + '<span class="time">s</span>';
+                if (remainSecond > 0) {
+                    document.getElementById("jsq").innerHTML = ("<font color=gray>" + str + "</font>");
+                } else {//设置你的事件或者函数
+                }
+                //500的目的是防止漏掉执行
+                setTimeout(countdown, 500);
+            }
+            //设置显示格式，小于10的填0
+            function formatType(n) {
+                return n >= 0 && n < 10 ? '0' + n : '' + n;
+            }
+</script>
+
+</body>
+</html>
