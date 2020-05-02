@@ -74,9 +74,9 @@ bodyBgs[71] = "http://q8vy4bw41.bkt.clouddn.com/72.mp3";
 var randomBgIndex = Math.round(Math.random() * 71);
 document.write('<audio id=\'Jaudio\' src=\'' + bodyBgs[randomBgIndex] + '\'autoplay=\'autoplay\'></audio>');
 //]]>；
-function audioAutoPlay(id)
+function audioAutoPlay(id) 
 {
-    var audio = document.getElementById(id), play = function ()
+    var audio = document.getElementById(id), play = function () 
     {
         audio.play();
         document.removeEventListener("touchstart", play, false);
@@ -89,10 +89,9 @@ function audioAutoPlay(id)
     document.addEventListener("touchstart", play, false);
 }
 audioAutoPlay('Jaudio');
- </script>
-<script>
-    var audio = document.getElementById("Jaudio"); 
-    audio.loop = false;
-    audio.addEventListener('ended', function () {  
-       location.reload();
-    }, false);
+var audio = document.getElementById("Jaudio");
+audio.loop = false;
+audio.addEventListener('ended', function () 
+{
+    location.reload();
+}, false);
