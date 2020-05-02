@@ -72,4 +72,27 @@ bodyBgs[69] = "http://q8vy4bw41.bkt.clouddn.com/70.mp3";
 bodyBgs[70] = "http://q8vy4bw41.bkt.clouddn.com/71.mp3";
 bodyBgs[71] = "http://q8vy4bw41.bkt.clouddn.com/72.mp3";
 var randomBgIndex = Math.round(Math.random() * 71);
-document.write('<audio id=\'Jaudio\' src=\'' + bodyBgs[randomBgIndex] + '\'autoplay=\'autoplay\'></audio>'); //]]>
+document.write('<audio id=\'Jaudio\' src=\'' + bodyBgs[randomBgIndex] + '\'autoplay=\'autoplay\'></audio>');
+//]]>；
+function audioAutoPlay(id)
+{
+    var audio = document.getElementById(id), play = function ()
+    {
+        audio.play();
+        document.removeEventListener("touchstart", play, false);
+    };
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () 
+    {
+        play();
+    }, false);
+    document.addEventListener("touchstart", play, false);
+}
+audioAutoPlay('Jaudio');
+ </script>
+<script>
+    var audio = document.getElementById("Jaudio"); 
+    audio.loop = false;
+    audio.addEventListener('ended', function () {  
+       location.reload();
+    }, false);
