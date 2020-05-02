@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<title>VideoDemo</title>
+		<link rel="stylesheet" href="./res/layui/css/layui.css">
+		<link rel="stylesheet" href="./res/static/css/index.css">
+		<style>
+		{  
+		            margin: 0px;  
+		            padding: 0px;  
+		        }  
+		        video{  
+		            position: fixed;  
+		            right: 0px;  
+		            bottom: 0px;  
+		            min-width: 100%;  
+		            min-height: 100%;  
+		            height: auto;  
+		            width: auto;  
+		            /*加滤镜*/
+		            /*filter: blur(15px); //背景模糊设置 */
+		            /*-webkit-filter: grayscale(100%);*/  
+		            /*filter:grayscale(100%); //背景灰度设置*/  
+		            z-index:-11
+		        }  
+		        source{  
+		            min-width: 100%;  
+		            min-height: 100%;  
+		            height: auto;  
+		            width: auto;  
+		        } 
+		divx {
+		    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+		    font-weight: 100;
+		    background: rgba(0, 0, 0, 0.3);
+		    color: white;
+		    padding: 2rem;
+		    width: 33%;
+		    margin: 2rem;
+		    float: right;
+		    font-size: 1.2rem;
+		}
+		h1 {
+		    font-size: 1.7rem;
+		    text-transform: uppercase;
+		    margin-top: 0;
+		    letter-spacing: .1.7rem;
+		}
+		a {
+		    display: inline-block;
+		    color: #fff;
+		    text-decoration: none;
+		    background: rgba(0, 0, 0, 0.5);
+		    padding: .5rem;
+		    transition: .6s background;
+		}
+		a:hover {
+		    background: rgba(0, 0, 0, 0.9);
+		}
+		@media screen and (max-width: 500px) {
+		    div {
+		        width: 70%;
+		    }
+		}
+		@media screen and (max-device-width: 800px) {
+		    #bgvid {
+		        display: none;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="https://wow.techbrood.com/libs/jquery/jquery-2.1.1.min.js"></script>
+		  <video id="v1" autoplay loop>
+		              <source src="http://q8vy4bw41.bkt.clouddn.com/bg.mp4" type="video/mp4"  />
+		        </video>
+		<divx id="polina">
+		    <h1 id="jsq">Demo</h1>
+		    <p>Created by 205004</p><a href="/">Back to index.</a>
+		</divx>
+</body>
+</html>

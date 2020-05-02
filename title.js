@@ -8,6 +8,6 @@ document.addEventListener('visibilitychange', function(){
         document.title = '略略略 你回来啦 ';  
         titleTime = setTimeout(function() {  
             document.title = OriginTitile;  
-        }, 1000); // 2秒后恢复原标题  
+        }, 3000); 
     }  
 });  
