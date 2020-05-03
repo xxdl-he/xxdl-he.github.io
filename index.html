@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<head>
+<html><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
   <title>中考倒计时</title>
@@ -8,10 +7,10 @@
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="click.js"></script>
   <script type="text/javascript" src="title.js"></script>
-  <script type="text/javascript" src="music.js"></script>
+  <script type="text/javascript" src="music.js"></script></head><body>
   <script type="text/javascript" src="count.js"></script>
-</head>
-<body>
+
+
   <!-- nav部分 -->
   <div class="nav index">
     <div class="layui-container">
@@ -29,28 +28,28 @@
           <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
           <li class="layui-nav-item"><a href="download.html">下载</a></li>
           <li class="layui-nav-item"><a href="lyb.html">VideoDemo</a></li>
-        </ul>
+        <span class="layui-nav-bar"></span></ul>
       </div>
     </div>
   </div>
   <!-- banner部分 -->
   <div>
-    <div class="layui-carousel" id="banner">
-      <div carousel-item>
-        <div>
+    <div class="layui-carousel" id="banner" lay-anim="" lay-indicator="inside" lay-arrow="always" style="width: 100%; height: 898px;">
+      <div carousel-item="">
+        <div class="layui-this">
           <img src="https://s1.ax1x.com/2020/05/02/JvvDQf.jpg">
-          <div class="panel">
-            <p class="title">2020中考</p>
-            <p class="h3" id="zkdjs">Loading...</p>
+          <div class="title active">
+            <p class="title">距离2020中考</p>
+            <h1 id="zkdjs">Loading...</h1>
           </div>
         </div>
-        <div>
+        <div class="">
           <img src="https://s1.ax1x.com/2020/05/02/Jvx9mD.jpg">
         </div>
       </div>
-    </div>
+    <div class="layui-carousel-ind"><ul><li class="layui-this"></li><li class=""></li></ul></div><button class="layui-icon layui-carousel-arrow" lay-type="sub"></button><button class="layui-icon layui-carousel-arrow" lay-type="add"></button></div>
   </div>
-  </div>
+  
   <div class="footer">
     <div class="layui-container">
       <div class="layui-row footer-contact">
@@ -76,5 +75,6 @@
     base: './res/static/js/' 
   }).use('firm'); 
 </script>
-</body>
-</html>
+
+
+</div></body></html>
