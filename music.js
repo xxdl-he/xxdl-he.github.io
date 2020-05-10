@@ -71,27 +71,80 @@ bodyBgs[68] = "https://snakekisscdn.imfast.io/69.mp3";
 bodyBgs[69] = "https://snakekisscdn.imfast.io/70.mp3";
 bodyBgs[70] = "https://snakekisscdn.imfast.io/71.mp3";
 bodyBgs[71] = "https://snakekisscdn.imfast.io/72.mp3";
-var randomBgIndex = Math.round(Math.random() * 71);
+bodyBgs[72] = "https://snakekisscdn.imfast.io/73.mp3";
+bodyBgs[73] = "https://snakekisscdn.imfast.io/74.mp3";
+bodyBgs[74] = "https://snakekisscdn.imfast.io/75.mp3";
+bodyBgs[75] = "https://snakekisscdn.imfast.io/76.mp3";
+bodyBgs[76] = "https://snakekisscdn.imfast.io/77.mp3";
+bodyBgs[77] = "https://snakekisscdn.imfast.io/78.mp3";
+bodyBgs[78] = "https://snakekisscdn.imfast.io/79.mp3";
+bodyBgs[79] = "https://snakekisscdn.imfast.io/80.mp3";
+bodyBgs[80] = "https://snakekisscdn.imfast.io/81.mp3";
+bodyBgs[81] = "https://snakekisscdn.imfast.io/82.mp3";
+bodyBgs[82] = "https://snakekisscdn.imfast.io/83.mp3";
+bodyBgs[83] = "https://snakekisscdn.imfast.io/84.mp3";
+bodyBgs[84] = "https://snakekisscdn.imfast.io/85.mp3";
+bodyBgs[85] = "https://snakekisscdn.imfast.io/86.mp3";
+bodyBgs[86] = "https://snakekisscdn.imfast.io/87.mp3";
+bodyBgs[87] = "https://snakekisscdn.imfast.io/88.mp3";
+bodyBgs[88] = "https://snakekisscdn.imfast.io/89.mp3";
+bodyBgs[89] = "https://snakekisscdn.imfast.io/90.mp3";
+bodyBgs[90] = "https://snakekisscdn.imfast.io/91.mp3";
+bodyBgs[91] = "https://snakekisscdn.imfast.io/92.mp3";
+bodyBgs[92] = "https://snakekisscdn.imfast.io/93.mp3";
+bodyBgs[93] = "https://snakekisscdn.imfast.io/94.mp3";
+bodyBgs[94] = "https://snakekisscdn.imfast.io/95.mp3";
+bodyBgs[95] = "https://snakekisscdn.imfast.io/96.mp3";
+bodyBgs[96] = "https://snakekisscdn.imfast.io/97.mp3";
+bodyBgs[97] = "https://snakekisscdn.imfast.io/98.mp3";
+bodyBgs[98] = "https://snakekisscdn.imfast.io/99.mp3";
+bodyBgs[99] = "https://snakekisscdn.imfast.io/100.mp3";
+bodyBgs[100] = "https://snakekisscdn.imfast.io/101.mp3";
+bodyBgs[101] = "https://snakekisscdn.imfast.io/102.mp3";
+bodyBgs[102] = "https://snakekisscdn.imfast.io/103.mp3";
+bodyBgs[103] = "https://snakekisscdn.imfast.io/104.mp3";
+bodyBgs[104] = "https://snakekisscdn.imfast.io/105.mp3";
+bodyBgs[105] = "https://snakekisscdn.imfast.io/106.mp3";
+bodyBgs[106] = "https://snakekisscdn.imfast.io/107.mp3";
+bodyBgs[107] = "https://snakekisscdn.imfast.io/108.mp3";
+bodyBgs[108] = "https://snakekisscdn.imfast.io/109.mp3";
+bodyBgs[109] = "https://snakekisscdn.imfast.io/110.mp3";
+bodyBgs[110] = "https://snakekisscdn.imfast.io/111.mp3";
+bodyBgs[111] = "https://snakekisscdn.imfast.io/112.mp3";
+bodyBgs[112] = "https://snakekisscdn.imfast.io/113.mp3";
+bodyBgs[113] = "https://snakekisscdn.imfast.io/114.mp3";
+bodyBgs[114] = "https://snakekisscdn.imfast.io/115.mp3";
+bodyBgs[115] = "https://snakekisscdn.imfast.io/116.mp3";
+bodyBgs[116] = "https://snakekisscdn.imfast.io/117.mp3";
+bodyBgs[117] = "https://snakekisscdn.imfast.io/118.mp3";
+bodyBgs[118] = "https://snakekisscdn.imfast.io/119.mp3";
+bodyBgs[119] = "https://snakekisscdn.imfast.io/120.mp3";
+bodyBgs[120] = "https://snakekisscdn.imfast.io/121.mp3";
+bodyBgs[121] = "https://snakekisscdn.imfast.io/122.mp3";
+bodyBgs[122] = "https://snakekisscdn.imfast.io/123.mp3";
+bodyBgs[123] = "https://snakekisscdn.imfast.io/124.mp3";
+var randomBgIndex = Math.round(Math.random() * 123);
 document.write('<audio id=\'Jaudio\' src=\'' + bodyBgs[randomBgIndex] + '\'autoplay=\'autoplay\'></audio>');
 //]]>；
-function audioAutoPlay(id) 
-{
-    var audio = document.getElementById(id), play = function () 
-    {
-        audio.play();
-        document.removeEventListener("touchstart", play, false);
-    };
-    audio.play();
-    document.addEventListener("WeixinJSBridgeReady", function () 
-    {
-        play();
-    }, false);
-    document.addEventListener("touchstart", play, false);
+function audioAutoPlay(id) {
+	var audio = document.getElementById(id),
+	play = function() {
+		audio.play();
+		document.removeEventListener("touchstart", play, false);
+	};
+	audio.play();
+	document.addEventListener("WeixinJSBridgeReady",
+	function() {
+		play();
+	},
+	false);
+	document.addEventListener("touchstart", play, false);
 }
 audioAutoPlay('Jaudio');
 var audio = document.getElementById("Jaudio");
 audio.loop = false;
-audio.addEventListener('ended', function () 
-{
-    location.reload();
-}, false);
+audio.addEventListener('ended',
+function() {
+	location.reload();
+},
+false);
