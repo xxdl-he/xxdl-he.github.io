@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 江城子 · 密州出猎\n**作者** *宋•苏轼*\n1. **全文**⚐\n> 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。<br>酒酣胸胆尚开张，鬓微霜，又何妨。持节云中，何日遣冯唐？会挽雕弓如满月，西北望，射天狼。\n2. **注解**▽\n> 江城子：词牌名。据唐·崔令钦《教坊记》、敦煌曲子词与现存晚唐前文人词，均无载录《江城子》，故是调当兴于晚唐。王昆吾《唐代酒令艺术》谓是调源自唐著词曲调，即唐时酒令，知是调始流行于晚唐酒筵上，经文人加工，遂成小令词调。唐五代时为单调，始见《花间集》韦端己词，单调三十五字，七句五平韵，间有三十六字、三十七字诸格。可见唐五代《江城子》调兴之初，格式尚未定型。全唐五代以《江城子》词约十六首，由七位词人所作，以端己最长，当为最早依调填词者。五代时，欧阳炯单调词添一衬字变尾二句为七言句，开宋词「衬字法」。牛松卿单调词添二字于第二句，开宋词「添字法」。尹参卿单调词摊破首句为两三言句，开宋词「减字法」、「摊破法」。北宋初，是调作者甚少，晏同叔、柳耆卿、欧阳文忠诸大家均无《江城子》传世，唯张子野有两首《江城子》。至东坡始变双调，由是词格渐定。薛瑞生《东坡词编年笺證》中考东坡首用是调约于熙宁年间，《江神子·湖上与张先同赋，时闻弹筝》与《江神子·孤山竹阁送述古》即东坡初创之作，仍承唐 五代词柔婉细腻之风。元丰间，《江神子·乙卯正月二十日夜记梦》和《江神子·密州出猎》开一代词风，引时人乃至後代追和。是调衰于金 元，近三分之一为道士所作，内容多涉道教。《钦定词谱》：「晁无咎改名《江神子》，韩涧泉词有『腊後春前邨意远』句，更名《邨意远》。」严建文《词牌释例》：「《江城子》，又名《江神子》、《邨意远》、《水晶帘》，……清李符曾《词家辨證》云：『南唐人张泌有《江城子》二阕，五代欧阳炯用此调填词有『如西子镜，照江城』句，含本意……」《唐圭璋推荐唐宋词》注：「《江城子》调应由咏江城事而得名。『子』为曲名後缀。本篇用原始题意咏扬子江畔古城金陵。」可知调因欧词「如西子镜，照江城」句得名。欧词虽非现存《江城子》首作，然咏江城金陵事而归本意。有单调四体，分三十五字、三十六字、三十七字三种；双调一体，七十字，上下阕各七句，五平韵。格律多为平韵格，双调体偶有填仄韵者。<br>「密州出猎」：明吴讷钞本、《苏长公二妙集》本、毛本作「猎词」。《东坡外集》作「徐州行猎」。<br>密州：龙榆生笺引《钦定大清一统志·卷一百三十四·〈青州府·诸城县〉》：「诸城县，在府东南二百八十里，东西距九十里，南北距一百八十里。东至莱州府胶州界四十里，西至沂州府莒州界五十里，南至沂州府日照县界一百二十里，北至安邱县界六十里，东南至海一百五十里，西南至日照县界七十里，东北至莱州府高密县界五十里，西北至安邱县界九十里。本春秋时，鲁诸邑及齐琅邪邑地。秦置琅邪郡。汉初置东武县，为郡治并领琅邪诸县，後汉改置琅邪国，于开阳以东武等三县为属。三国魏因之。晋初省琅邪县，以东武诸县属城阳郡，太康十年属东莞郡。宋以东武县分属平昌郡。後魏永安二年，置东武郡兼置胶州。北齐改置高密郡，仍置胶州省诸县入之。隋开皇初，郡废，五年改州曰密州，十八年改东武县曰诸城，大业初州废为高密郡。唐武德五年，复曰密州。天宝元年，复曰高密郡。乾元元年，复曰密州，属河南道。宋曰密州高密郡，开宝五年升安化军节度，属京东东路。金曰密州，属山东东路。明洪武元年，始废密州以县，属青州府。本朝因之。按青州府属旧有安东卫，一本从沂州府日照县分置日照，旧隶青州後为沂属而安东未经改归。本朝乾隆七年裁卫，以所辖村庄归入诸城、日照二县，但计其道里，究与日照为近，应将安东废卫列入沂州，附识于此。」<br>牵黄、擎苍：傅子立注：「《南史》：『张充少好逸游。张绪尝告归至吴，始入西郭，时充方出猎，左臂鹰，右牵狗。遇绪船至，便放绁脱韝（gōu），拜于水次。』『黄』，黄狗也；『苍』，苍鹰也。」刘尚荣按：「详见《南史·卷三十一·〈张裕传·（孙）张充传〉》。《南史》原文作『右臂鹰，左牵狗』。《梁书·卷二十一·张充传》文字稍异，作『左手臂鹰，右手牵狗。』」龙榆生笺引《梁书·卷二十一·张充传》：「张充字延符，吴郡人。父绪，齐特进、金紫光禄大夫，有名前代。充少时，不持操行，好逸游。绪尝请假还吴，始入西郭，值充出猎，左手臂鹰，右手牵狗，遇绪船至，便放绁脱韝，拜于水次。绪曰：『一身两役，无乃劳乎？』充跪对曰：『充闻三十而立，今二十九矣，请至来岁而敬易之。』绪曰：『过而能改，颜氏子有焉。』」<br>锦帽貂裘：傅子立注：「『锦帽』，锦蒙帽也；『貂裘』，貂鼠裘也。李太白：『绣衣貂裘明积雪。』古者诸侯千乘，今太守，古诸侯也，故出拥千骑。」刘尚荣按：「李句出《送程刘二侍郎兼独孤判官赴安西幕府》。」<br>倾城：龙榆生笺引《汉书·卷九十七上·〈外戚列传·孝武李夫人传〉》：「孝武李夫人，本以倡进。初，夫人兄延年性知音，善歌舞，武帝爱之。每为新声变曲，闻者莫不感动。延年侍上，起舞，歌曰：『北方有佳人，绝世而独立，一顾倾人城，再顾倾人国。宁不知倾城与倾国，佳人难再得！』上叹息曰：『善！世岂有此人乎？』平阳主因言延年有女弟，上乃召见之，实妙丽善舞。由是得幸，生一男，是为昌邑哀王。」<br>随太守：明吴讷钞本作「贤太守」。<br>孙郎：傅子立注：「《吴志》：『孙仲谋尝亲乘马，射虎于庱（Chěng）亭。马为虎所伤，仲谋投以双戟，虎却废。常从张世击以戈，获之。』按《吴志》，『庱』，摅陵反。」刘尚荣按：「见《三国志·卷四十七·〈吴书·吴主传〉》裴世期注。」龙榆生笺引《三国志·卷四十七·〈吴书·吴主传〉》：「（建安）二十三年十月，权将如吴，亲乘马射虎于庱亭。马为虎所伤，权投以双戟，虎却废。常从张世击以戈，获之。」<br>鬓微霜：傅子立注：「王黄州《老将》诗：『归来两鬓霜。』」刘尚荣按：「王黄州《小畜集·卷十·送史馆学士杨亿闽中迎侍》：『莫笑蹉跎两鬓霜。』晁无咎《鸡肋集·卷十·赵开祖挽歌辞》：『万里归来两鬓霜。』傅子立似将两人诗讹混。无王黄州《老将》诗。」<br>冯唐：傅子立注：「汉冯唐，文帝时老为郎。後因言云中太守魏尚事，悟帝，帝悦，遣唐持节云中，赦尚，而拜唐为车骑都尉。」刘尚荣按：「事见《汉书·卷五十·冯唐传》。」龙榆生笺引《汉书·卷五十·冯唐传》：「冯唐，祖父赵人也。父徙代。汉兴徙安陵。唐以孝著，为郎中署长，事文帝。帝辇过，问唐曰：『父老何自为郎？家安在？』具以实言。文帝曰：『吾居代时，吾尚食监高祛数为我言赵将李齐之贤，战于钜鹿下。吾每饮食，意未尝不在钜鹿也。父老知之乎？』唐对曰：『齐尚不如廉颇、李牧之为将也。』上曰：『何已？』唐曰：『臣大父在赵时，为官帅将，善李牧。臣父故为代相，善李齐，知其为人也。』上既闻廉颇、李牧为人，良说，乃拊髀曰：『嗟乎！吾独不得廉颇、李牧为将，岂忧匈奴哉！』唐曰：『主臣！陛下虽有廉颇、李牧，不能用也。』」上怒，起入禁中。良久，召唐让曰：『公众辱我，独亡间处虖？』唐谢曰：『鄙人不知忌讳。』当是时，匈奴新大入朝那，杀北地都尉卬。上以胡寇为意，乃卒复问唐曰：『公何以言吾不能用颇、牧也？』唐对曰：『臣闻上古王者遣将也，跪而推毂，曰：「闑以内寡人制之，闑以外将军制之；军功爵赏，皆决于外，归而奏之。」此非空言也。臣大父言李牧之为赵将居边，军市之租皆自用飨士，赏赐决于外，不从中覆也。委任而责成功，故李牧乃得尽其知能，选车千三百乘，彀骑万三千匹，百金之士十万，是以北逐单于，破东胡，灭澹林，西抑彊秦，南支韩、魏。当是时，赵几伯。後会赵王迁立，其母倡也，用郭开谗，而诛李牧，令颜聚代之。是以为秦所灭。今臣窃闻魏尚为云中守，军市租尽以给士卒，出私养钱，五日壹杀牛，以飨宾客军吏舍人，是以匈奴远避，不近云中之塞。虏尝一入，尚帅车骑击之，所杀甚众。夫士卒尽家人子，起田中从军，安知尺籍伍符？终日力战，斩首捕虏，上功莫府，一言不相应，文吏以法绳之。其赏不行，吏奉法必用。愚以为陛下法太明，赏太轻，罚太重。且云中守尚坐上功首虏差六级，陛下下之吏，削其爵，罚作之。繇此言之，陛下虽得李牧，不能用也。臣诚愚，触忌讳，死罪！』文帝说。是日，令唐持节赦魏尚，复以为云中守，而拜唐为车骑都尉，主中尉及郡国车士。十年，景帝立，以唐为楚相。武帝即位，求贤良，举唐。唐时年九十馀，不能为官，乃以子遂为郎。遂字王孙，亦奇士。魏尚，槐里人也。」<br>「会挽雕弓如满月，西北望，射天狼」：以上三句凡十三字，傅注本残佚，今据元延祐本补。<br>天狼：龙榆生笺：「《楚辞·九歌·东君》：『举长矢兮射天狼。』王叔师注：『天狼，星名，以喻贪残。』《晋书·天文志》：『狼一星在东井南，为野将，主侵掠。』」词中以之隐喻犯宋边之西夏。\n3. **翻译**☆\n> 我姑且抒发一下少年人的狂傲之气，左手牵着黄狗，右手托着苍鹰。随从的将士们头戴华美艳丽的帽子，身穿貂皮做的衣服，浩浩荡荡的大部队像疾风一样，席卷平坦的山冈。为报答全城的百姓都来追随我，我一定要像孙权一样射杀一头老虎给大家看看。<br>喝酒喝到正高兴时，我的胸怀更加开阔，我的胆气更加张扬。即使头髮微白，又有什么关系呢？朝廷什么时候才能派人拿着符节来密州赦免我的罪呢？那时我定当拉开弓箭，使之呈现满月的形状，瞄准西北，把代表西夏的天狼星射下来。\n4. **背景与赏析**✐\n> 此词做于熙宁八年（西元一〇七五年）作者任密州太守时，通过平冈围猎壮阔场面的描写，抒发了渴望报国立功的豪情壮志。作者在《与鲜于子骏书》中曾云：「近确颇作小词，虽无柳七郎风味，亦自是一家，呵呵。数日前猎于郊外，所获颇多。做得一阙，令东州壮士抵掌顿足而歌之，吹笛击鼓以为节，颇壮观也。」可见此词乃作者得意之作。');
+    </script>
+</body>
+
+</html>

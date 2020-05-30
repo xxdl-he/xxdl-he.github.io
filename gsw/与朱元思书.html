@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 与朱元思书\n**作者** *南北朝•吴均*\n1. **全文**⚐\n> 风烟俱净，天山共色。从流飘荡，任意东西。自富阳至桐庐，一百许里，奇山异水，天下独绝。<br>水皆缥碧，千丈见底。游鱼细石，直视无碍。急湍甚箭，猛浪若奔。<br>夹岸高山，皆生寒树。负势竞上，互相轩邈；争高直指，千百成峰。泉水激石，泠泠作响；好鸟相鸣，嘤嘤成韵。蝉则千转不穷，猿则百叫无绝。鸢飞戾天者，望峰息心；经纶世务者，窥谷忘反。横柯上蔽，在昼犹昏；疏条交映，有时见日。\n2. **注解**▽\n> 书：是古代的一种文体。<br>风烟俱净：烟雾都消散尽净。风烟，指烟雾。俱，全，都。净，消散尽净。<br>共色：一样的颜色。共，一样。<br>从流飘荡：乘船随着江流漂荡。从，顺，随。<br>任意东西：情境任凭船按照自己的意愿，时而向东，时而向西。东西，方向，在此做动词，向东漂流，向西漂流。<br>许：表示大约的数量，上下，左右。<br>独绝：独一无二。独，只；绝，绝妙。<br>缥（piǎo）碧：原作“漂碧”，据其他版本改为此，青白色。<br>游鱼细石：游动的鱼和细小的石头。<br>直视无碍：一直看下去，可以看得很清楚，毫无障碍。这里形容江水清澈见底。<br>急湍（tuān）：急流的水。急，迅速，又快又猛。湍，水势急速。<br>甚箭：“甚于箭”，比箭还快。甚，胜过，超过。为了字数整齐，中间的“于”字省略了。<br>若：好像。<br>奔：动词活用作名词，文中指飞奔的骏马。<br>寒树：使人看了有寒意的树。<br>负势竞上：高山凭依高峻的地势，争着向上。负，凭借。竞，争着。上，向上。这一句说的是「高山」，不是「寒树」，这从下文「千百成峰」一语可以看得出来。<br>轩邈（miǎo）：意思是这些高山彷彿都在争着往高处和远处伸展。轩，向高处伸展。邈，向远处伸展。这两个词在这里形容词活用为动词用。<br>直指：笔直地向上，直插云天。指，向，向上。<br>千百成峰：意思是形成无数山峰。<br>激：冲击，拍打。<br>泠（líng）泠作响：泠泠地发出声响。泠泠，拟声词，形容水声的清越。<br>好：美丽的。<br>相鸣：互相和鸣，互相鸣叫。<br>嘤（yīng）嘤成韵：鸣声嘤嘤，和谐动听。嘤嘤，鸟鸣声。韵，和谐的声音。<br>蝉则千转（zhuàn）不穷：蝉儿长久不断地鸣叫。则，助词，没有实在意义。千转：长久不断地叫。千，表示多，“千”与下文“百”都表示很多。转，通“啭”，鸟鸣声。这里指蝉鸣。穷，穷尽。<br>无绝：就是“不绝”。与上句中的“不穷”相对。绝，停止。<br>鸢（yuān）飞戾（lì）天：出自《诗经·大雅·旱麓》。老鹰高飞入天，这里比喻追求名利极力攀高的人。鸢，俗称老鹰，善高飞，是一种凶猛的鸟。戾，至。<br>望峰息心：意思是看到这些雄奇的山峰，追逐名利的心就会平静下来。息，使……平息，使动用法。<br>经纶（lún）世务者：治理社会事务的人。经纶，筹划、治理。世务，政务。<br>窥谷忘反：看到这些幽美的山谷，就会流连忘返。窥，看。反，通“返”，返回。<br>横柯（kē）上蔽：横斜的树木在上面遮蔽着。柯，树木的枝干。上，方位名词作状语，在上面。蔽，遮蔽。<br>在昼犹昏：在白天，也好像黄昏时那样阴暗。昼，白天。犹，好像。<br>疏条交映：稀疏的枝条互相掩映。疏条，稀疏的小枝。交映，互相遮掩。交，相互。<br>见：看见。<br>日：太阳，阳光。\n3. **翻译**☆\n> 风和烟都消散了，天和山变成相同的颜色。（我乘着船）随着江流漂荡，随意的向东或向西漂流。从富阳到桐庐，一百里左右，奇异的山，灵异的水，天下独一无二的。<br>水都是青白色的，清澈的水千丈也可以看见底。游动的鱼儿和细小的石头，可以直接看见，毫无障碍。湍急的水流比箭还快，凶猛的巨浪就像奔腾的骏马。<br>夹江两岸的高山上，都充满着寒意的树，高山凭依着高峻的山势，争着向上，这些高山彼此都争着往高处和远处伸展；群山竞争着高耸，笔直地向上形成了无数个山峰。泉水飞溅在山石之上，发出清悦泠泠的响声；美丽的鸟相互和鸣，鸣声嘤嘤，和谐动听。蝉儿长久地叫个不停，猿猴长时间地叫个不停。像凶猛的鸟飞到天上为名利极力追求高位的人，看到这些雄奇的高峰，追逐功名利禄的心也就平静下来。那些整天忙于政务的人，看到这些幽美的山谷，就会流连忘返。横斜的树枝在上面遮蔽着，即使在白天，也像黄昏时那样阴暗；稀疏的枝条交相掩映，有时也可以见到阳光。\n4. **背景与赏析**✐\n> 《与朱元思书》是南朝梁文学家吴均所著的一篇著名的山水小品，是吴均写给好友朱元思（一作宋元思，字玉山，生平不详）的信中的一个片段，被视为骈文中写景的精品。该文既用人的感受反衬出山水之美，也抒发了对功名利禄的鄙弃，对官场政务的厌倦，含蓄地流露出爱慕美好的大自然，避世退隐的高洁志趣。');
+    </script>
+</body>
+
+</html>

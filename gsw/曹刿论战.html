@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 曹刿论战\n**作者** *周•左丘明*\n1. **全文**⚐\n> 十年春，齐师伐我。公将战。曹刿请见。其乡人曰：“肉食者谋之，又何间焉？”刿曰：“肉食者鄙，未能远谋。”乃入见。问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未徧，民弗从也。”公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也。可以一战。战则请从。”<br>公与之乘，战于长勺。公将鼓之。刿曰：“未可。”齐人三鼓。刿曰：“可矣。”齐师败绩。公将驰之。刿曰：“未可。”下视其辙，登轼而望之，曰：“可矣。”遂逐齐师。<br>既克，公问其故。对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之，夫大国，难测也，惧有伏焉。吾视其辙乱，望其旗靡，故逐之。”\n2. **注解**▽\n> 曹刿（guì）：春秋时鲁国大夫。著名的军事理论家。<br>十年：鲁庄公十年（公元前684年）。<br>齐师：齐国的军队。齐，在今山东省中部。师，军队。<br>伐：攻打。<br>我：指鲁国。《左传》根据鲁史而写，故称鲁国为“我”。<br>公：诸侯的通称，这里指鲁庄公。<br>肉食者：吃肉的人，指当权者。<br>谋：谋议。<br>间（jiàn）：参与。<br>鄙：鄙陋，目光短浅。<br>乃：于是，就。<br>何以战：就是“以何战”，凭借什么作战？以，用，凭，靠。<br>衣食所安，弗敢专也：衣食这类养生的东西，不敢独自享用。安：有“养”的意思。弗：不。专：独自专有，个人专有。<br>必以分人：省略句，省略了"之"，完整的句子是“必以之分人”。一定把它分给别人。以，把。人：指鲁庄公身边的近臣或贵族。<br>徧：一作“遍”，遍及，普遍。<br>牺牲玉帛（bó）：古代祭祀用的祭品。牺牲，祭祀用的猪、牛、羊等。玉，玉器。帛，丝织品。<br>加：虚报夸大。<br>小信未孚（fú）：（这只是）小信用，未能让神灵信服。孚，使人信服。<br>福：名词作动词，赐福，保佑。<br>狱：（诉讼）案件。<br>察：明察。<br>情：实情。<br>忠之属也：这是尽了职分（的事情）。忠，尽力做好分内的事。属，种类。<br>可以一战：就是“可以之一战”，可以凭借这个条件打一仗。可，可以。以，凭借。<br>战则请从：（如果）作战，请允许（我）跟从去。从：随行，跟从。<br>公与之乘：鲁庄公和他共坐一辆战车。之，指曹刿。<br>长勺：鲁国地名，今山东莱芜东北。<br>败绩：军队溃败。<br>驰：驱车追赶。<br>辙（zhé）：车轮碾出的痕迹。<br>轼：古代车厢前做扶手的横木。<br>遂：于是，就。<br>逐：追赶，这里指追击。<br>既克：已经战胜。既，已经。<br>夫战，勇气也：作战，（是靠）敢作敢为毫不畏惧的气概。夫（fú），放在句首，表示将发议论，没有实际意义。<br>一鼓作气：第一次击鼓能振作士气。作，振作。<br>再：第二次。<br>三：第三次。<br>彼竭我盈：他们的勇气已尽，我们的勇气正盛。彼，代词，指齐军方面。盈，充沛，饱满，这里指士气旺盛。<br>难测：难以推测。测，推测，估计。<br>伏：埋伏。<br>靡（mǐ）：倒下。\n3. **翻译**☆\n> 鲁庄公十年的春天，齐国军队攻打鲁国。鲁庄公将要迎战。曹刿请求拜见鲁庄公。他的同乡说：“打仗的事当权者自会谋划，你又何必参与呢？”曹刿说：“当权者目光短浅，不能深谋远虑。”于是入朝去见鲁庄公。曹刿问：“您凭借什么作战？”鲁庄公说：“衣食这一类安身立命的东西，不敢独自享有，一定把它分给身边的大臣。”曹刿回答说：“这些小恩惠不能遍及百姓，百姓是不会听从您的。”鲁庄公说：“祭祀神灵的牛、羊、玉帛之类的用品，我（从来）不敢虚报数目，一定要做到诚实可信。”曹刿说：“这只是小信用，不能让神灵信服，神是不会保佑你的。”鲁庄公说：“大大小小的案件，虽然不能件件都了解得清楚，但一定要处理得合情合理。”曹刿回答说：“这才尽了本职一类的事，可以凭借这个条件打一仗。如果作战，请允许我跟随您一同去。”<br>鲁庄公和他共坐一辆战车，在长勺和齐军作战。鲁庄公将要下令击鼓进军。曹刿说：“现在不行。”等到齐军三次击鼓之后。曹刿说：“可以击鼓进军了。”齐军溃败。鲁庄公又要下令驾车马追逐齐军。曹刿说：“还不行。”说完就下了战车，查看齐军车轮碾出的痕迹，又登上战车，扶着车前横木远望齐军的队形，这才说：“可以追击了。”于是追击齐军。<br>战胜齐军后，鲁庄公问他这样做的原因。曹刿回答说：“作战，是靠敢作敢为毫不畏惧的气概。第一次击鼓能够振作士气。第二次击鼓士兵们的士气就开始低落了，第三次击鼓士兵们的士气就耗尽了。他们的士气已经消失而我军的士气正盛，所以才战胜了他们。像齐国这样的大国，他们的情况是难以推测的，怕他们设下埋伏。我看他们车轮碾过的痕迹散乱，望见他们的旗子倒下了，所以决定追击他们。”\n4. **背景与赏析**✐\n> 本文出自《左传·庄公十年》。《曹刿论战》记载了发生在公元前684年，齐借口鲁国曾帮助公子纠争夺齐国君位，再次兴兵攻鲁，两军战于长勺。');
+    </script>
+</body>
+
+</html>

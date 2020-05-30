@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 岳阳楼记\n**作者** *宋•范仲淹*\n1. **全文**⚐\n> 庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴，乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上，属予作文以记之。<br>予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千；此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？<br>若夫淫雨霏霏，连月不开；阴风怒号，浊浪排空；日星隐曜，山岳潜形；商旅不行，樯倾楫摧；薄暮冥冥，虎啸猿啼；登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。<br>至若春和景明，波澜不惊，上下天光，一碧万顷；沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。<br>嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲，居庙堂之高则忧其民；处江湖之远则忧其君。是进亦忧，退亦忧；然则何时而乐耶？其必曰：先天下之忧而忧，后天下之乐而乐乎！噫！微斯人，吾谁与归！<br>时六年九月十五日。\n2. **注解**▽\n> 记：一种文体。可以写景、叙事，多为议论。但目的是为了抒发作者的情怀和政治抱负（阐述作者的某些观念）。<br>庆历四年：西元一〇四四年。庆历，宋仁宗赵祯的年号。本文末句中的「时六年」，指庆历六年（西元一〇四六年），点明作文的时间。<br>滕子京：名宗谅，子京是他的字，范文正的朋友。<br>谪（zhé）守：把被革职的官吏或犯了罪的人充发到边远的地方。在这里作为动词被贬官，降职解释。谪，封建王朝官吏降职或远调；守，做郡的长官。汉朝「守某郡」，就是做某郡的太守；宋朝废郡称州，应说「知某州」。<br>巴陵郡：即岳州，治所在今湖南岳阳，这里沿用古称。「守巴陵郡」就是「守岳州」。<br>越明年：有三说，其一指庆历五年，为针对庆历四年而言；其二指庆历六年，此「越」为经过、经历；其三指庆历七年，针对作记时间庆历六年而言。<br>政通人和：政事顺利，百姓和乐。这是赞美滕子京的话。政，政事；通，通顺；和，和乐。<br>百废具兴：各种荒废的事业都兴办起来了。百，不是确指，形容其多；废，这里指荒废的事业；具，通「俱」，全、皆；兴，复兴。<br>乃：于是。<br>制：规模。<br>唐贤今人：唐代和当代名人。贤，形容词作名词用。<br>属（zhǔ）：通「嘱」，嘱托、嘱咐。<br>予：我。<br>作文：写文章。<br>以：连词，用来。<br>记：记述。<br>夫：那。<br>胜状：胜景，好景色。<br>衔：包含。<br>吞：吞吐。<br>浩浩汤汤（shāng）：水波浩荡的样子。汤汤，水流大而急。<br>横无际涯：宽阔无边。横，广远；际涯，边（际、涯的区别：际专指陆地边界，涯专指水的边界）。<br>朝晖夕阴，气象万千：或早或晚（一天里）阴晴多变化。朝，在早晨，名词做状语；晖，日光；气象，景象；万千，千变万化。<br>此则岳阳楼之大观也：这就是岳阳楼的雄伟景象。此，这；则，就；大观，雄伟景象。<br>前人之述备矣：前人的记述很详尽了。前人之述，指上面说的「唐贤今人诗赋」；备，详尽、完备。<br>然则：虽然如此，那么。<br>南极潇湘：南面直到潇水、湘水。潇水是湘水的支流。湘水流入洞庭湖。南，向南；极，尽，最远到达。<br>迁客：谪迁的人，指降职远调的人。<br>骚人：诗人。战国时屈原作《离骚》，因此后人也称诗人为骚人。<br>多：大多。<br>会：聚集。<br>览物之情，得无异乎：看到自然景物而引发的情感，怎能不有所不同呢？览，观看、欣赏；得无……乎，大概……吧。<br>若夫：用在一段话的开头以引起下文。下文的「至若」，同此。「若夫」近似「像那」。「至若」近似「至于」。<br>霪雨：一作「淫雨」，连绵不断的雨。<br>霏霏：雨或雪（繁密）的样子。<br>开：（天气）放晴。<br>阴：阴冷。<br>排空：冲向天空。<br>日星隐曜：太阳和星星隐藏起光辉。曜，一作耀，光辉。<br>山岳潜形：山岳隐没了形体。岳，高大的山；潜，隐没；形，形迹。<br>行：走，此指前行。<br>樯（qiáng）倾楫（jí）摧：桅杆倒下，船桨折断。樯，桅杆；楫，船桨；倾，倒下；摧，折断。<br>薄暮冥冥：傍晚天色昏暗。薄，迫近；冥冥，昏暗的样子。<br>则：就。<br>有：产生……的（情感）。<br>去国怀乡，忧谗畏讥：离开国都，怀念家乡，担心（人家）说坏话，惧怕（人家）批评指责。去，离开；国，国都，指京城；忧，担忧；谗，谗言；畏，害怕、惧怕；讥，嘲讽。<br>萧然：凄凉冷落的样子。<br>感极：感慨到了极点。<br>而：连词，表顺接。<br>至若春和景明：至于到了春天气候暖和，阳光普照。至若，至于；春和，春风和煦；景，日光；明，明媚。<br>波澜不惊：湖面平静，没有惊涛骇浪。惊，这里有「起」「动」的意思。<br>上下天光，一碧万顷：天色湖面光色交映，一片碧绿，广阔无边。一，一片；万顷，极言其广。<br>沙鸥翔集，锦鳞游泳：沙鸥时而飞翔，时而停歇，美丽的鱼在水中游来游去。沙鸥，沙洲上的鸥鸟；翔集，时而飞翔时而停歇；集，栖止，鸟停息在树上；锦鳞，指美丽的鱼；鳞，代指鱼；游泳，或浮或沉；游，贴着水面游；泳，潜入水里游。<br>岸芷（zhǐ）汀（tīng）兰：岸上的小草，小洲上的兰花。芷，香草的一种；汀，小洲，水边平地。<br>郁郁：形容草木茂盛。<br>而或长烟一空：有时大片烟雾完全消散。或，有时；长，大片；一，全；空，消散。<br>皓月千里：皎洁的月光照耀千里。<br>浮光跃金：湖水波动时，浮在水面上的月光闪耀起金光。这是描写月光照耀下的水波。有些版本作「浮光耀金」。<br>静影沉璧：湖水平静时，明月映入水中，好似沉下一块玉璧。这里是写无风时水中的月影。璧，圆形正中有孔的玉。沉璧，像沉入水中的璧玉。<br>互答：一唱一和。<br>何极：哪有穷尽。何，怎么；极，穷尽。<br>心旷神怡：心情开朗，精神愉快。旷，开阔；怡，愉快。<br>宠辱偕忘：荣耀和屈辱一并都忘了。宠，荣耀；辱，屈辱；偕，一起，一作「皆」。<br>把酒临风：端酒面对着风，就是在清风吹拂中端起酒来喝。把，持、执；临，面对。<br>洋洋：高兴的样子。<br>嗟（jiē）夫：唉。嗟夫为两个词，皆为语气词。<br>尝：曾经。<br>求：探求。<br>古仁人：古时品德高尚的人。<br>心：思想（感情心思）。<br>或异二者之为：或许不同于（以上）两种心情。或，近于「或许」「也许」的意思，表委婉口气；为，这里指心理活动，即两种心情；二者，这里指前两段的「悲」与「喜」。<br>不以物喜，不以己悲：不因为外物好坏和自己得失而或喜或悲（此句为互文）。以，因为。<br>居庙堂之高，处在高高的庙堂上，意为在朝中做官。下文的「进」，即指「居庙堂之高」；庙，宗庙；堂，殿堂；庙堂：指朝廷。<br>居庙堂之高则忧其民：在朝中做官就担忧百姓。<br>处江湖之远：处在偏远的江湖间，意思是不在朝廷上做官，下文的「退」，即指「处江湖之远」。<br>处江湖之远则忧其君：处在僻远的地方做官就为君主担忧。<br>先天下之忧而忧，后天下之乐而乐：在天下人担忧之前先担忧，在天下人享乐之后纔享乐。先，在……之前；后，在……之后；其，指「古仁人」。<br>微斯人，吾谁与归：（如果）没有这种人，那我同谁一道呢？微，（如果）没有；斯人，这种人（指前文的「古仁人」）；谁与归，就是「与谁归」；归，归依。\n3. **翻译**☆\n> 庆历四年的春天，滕子京被贬官做巴陵郡守。隔了一年，政治清明通达，人民安居和顺，过去一切废弃的事情，都重新兴起。于是重修岳阳楼，增加过去旧的规模，刻制唐代贤人和现代人的诗赋在楼上，嘱咐我做一篇文章来记述这件事。<br>在我看来，巴陵郡的盛景，全在洞庭湖上：衔接远山，吞没长江，流水浩浩荡荡，一望无际，早晨的光辉和晚上的美景，有万千的气象，这就是岳阳楼的大景观，前人的叙述已经很详尽了。然而这里北面通到巫峡，南面极尽潇湘一带，被降职的官吏、诗人墨客，多到这里来聚会，观览景物的心情，难道没有不相同的吗？<br>当那久雨霏霏落下，一连几个月不断。阴冷的风狂吹怒叫，污浊的水浪横在空中；日月星辰隐没了光辉，山岳潜藏起形迹；商人旅客不能外出，船上的桅杆倾倒、橹桨损坏；傍晚时天色一片昏暗，耳听的老虎啸叫，猿声悲啼。这时登上岳阳楼，则有远离都城，怀念故乡，忧虑别人诽谤，害怕众人嘲讽的种种思绪，满目凄凉，感慨到了极点，心中无限悲伤起来了。<br>至于那春风清和，春景明媚，湖中波平浪静，上下天光明亮，万顷湖面一片碧绿。沙鸥飞翔云集，锦色的鱼儿在水中游泳，岸上的芷草、汀洲的兰花，显得郁郁青青。有时长烟横在空中，明月照耀千里，湖面波光闪耀，像金子一样发光，有时月亮在平静湖水中的影子像一轮沉入水中的玉璧，湖上渔人对歌，你问我答，这样快乐的情景，怎么会有穷尽呢？此时登上岳阳楼，则心旷神怡，心情舒畅，人生的荣华富贵，失意受辱都忘掉了。对着美景把酒痛饮，觉得其乐无穷，喜气洋洋了。<br>哎呀！我曾经探求过古代品德高尚的人的思想，或许不同于以上两种表现，为什么呢？他们不因为外物和个人的得失而欢喜或悲伤。在朝庭上做高官，则忧虑人民；处在江湖远方，就担心君王。他进也忧虑，退也忧愁，那么什么时候纔快乐呢？古仁人必定说：「先于天下人的忧去忧，晚于天下人的乐去乐吧！」唉！不是这种人，我与谁一道归去呢？<br>写于庆历六年九月十五日。\n4. **背景与赏析**✐\n> 《岳阳楼记》是北宋文学家范文正应好友巴陵郡太守滕子京之请，于北宋庆历六年（西元一〇四六年）九月十五日为重修岳阳楼写的。其中的诗句「先天下之忧而忧，后天下之乐而乐」、「不以物喜，不以己悲」是较为出名和引用较多的句子。文章通过对洞庭湖的侧面描写衬托岳阳楼。滕子京是被诬陷擅自动用官钱而被贬的，范仲淹正是借作记之机，含蓄规劝他要「不以物喜，不以己悲」，试图以自己「先天下之忧而忧，后天下之乐而乐」的济世情怀和乐观精神感染老友。这是本文命意之所在，也决定了文章叙议结合的风格。《岳阳楼记》超越了单纯写山水楼观的狭境，将自然界的晦明变化、风雨阴晴和「迁客骚人」的「览物之情」结合起来写，从而将全文的重心放到了纵议政治理想方面，扩大了文章的境界。');
+    </script>
+</body>
+
+</html>

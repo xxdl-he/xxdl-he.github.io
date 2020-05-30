@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 行路难三首\n**作者** *唐•李白*\n1. **全文**⚐\n> 【其一】<br>金樽清酒斗十千，玉盘珍羞直万钱。<br>停杯投箸不能食，拔剑四顾心茫然。<br>欲渡黄河冰塞川，将登太行雪满山。<br>闲来垂钓碧溪上，忽复乘舟梦日边。<br>行路难，行路难，多歧路，今安在？<br>长风破浪会有时，直挂云帆济沧海！<br>【其二】<br>大道如青天，我独不得出。<br>羞逐长安社中儿，赤鸡白雉赌梨栗。<br>弹剑作歌奏苦声，曳裾王门不称情。<br>淮阴市井笑韩信，汉朝公卿忌贾生。<br>君不见昔时燕家重郭隗，拥彗折节无嫌猜。<br>剧辛乐毅感恩分，输肝剖胆效英才。<br>昭王白骨萦蔓草，谁人更扫黄金台？<br>行路难，归去来！<br>【其三】<br>有耳莫洗颍川水，有口莫食首阳蕨。<br>含光混世贵无名，何用孤高比云月？<br>吾观自古贤达人，功成不退皆殒身。<br>子胥既弃吴江上，屈原终投湘水滨。<br>陆机雄才岂自保？李斯税驾苦不早。<br>华亭鹤唳讵可闻？上蔡苍鹰何足道？<br>君不见吴中张翰称达生，秋风忽忆江东行。<br>且乐生前一杯酒，何须身后千载名？\n2. **注解**▽\n> 行路难：乐府《杂曲歌辞》调名，古乐府道路六曲之一，亦有变行路难，内容多写社会道途艰难及离别悲伤之意，多以「君不见」为首，后鲍照拟作为多。<br>樽（zūn）：古代盛酒的器具，以金为饰。<br>清酒：清醇的美酒。<br>斗十千：一斗值十千钱（即万钱），形容酒美价高。<br>玉盘：精美的食具。<br>珍羞：珍贵的菜肴。羞，同「馐」，美味的食物。<br>直：通「值」，价值。<br>投箸（zhù）：丢下筷子。箸，筷子。<br>茫然：无所适从。<br>塞：堵塞。<br>太行：太行山，现山西、河南、河北三省交界处。<br>雪满山：一作「雪暗天」。详细说明：根据《平水韵》来看，这里一句的「川」和下一句的「边」都是属于下平一先，而「山」属于上平十五删。而「天」才是同在下平一先中的字。《平水韵》是后人总结唐人的用韵，总结的时候不可能把「山」这样的常见字放错位置，更不可能忽略这篇李白的名篇。<br>「闲来垂钓碧溪上，忽复乘舟梦日边。」句：暗用典故：姜太公吕尚曾在渭水的磻溪上钓鱼，得遇周文王，助周灭商；伊尹曾梦见自己乘船从日月旁边经过，后被商汤聘请，助商灭夏。这两句表示诗人自己对从政仍有所期待。碧，一作「坐」。<br>「多岐路，今安在。」句：岔道这么多，如今身在何处？岐，一作「歧」；安，哪里。<br>长风破浪：比喻实现政治理想。据《宋书·宗悫传》载：宗悫少年时，叔父宗炳问他的志向，他说：「愿乘长风破万里浪。」<br>会：当。<br>云帆：高高的船帆。船在海里航行，因天水相连，船帆好像出没在云雾之中。<br>济：渡过。<br>沧海：大海。<br>社：古二十五家为一社。<br>白狗：一作「白雉」。<br>弹剑：战国时齐公子孟尝君门下食客冯谖曾屡次弹剑作歌怨己不如意。<br>贾生：洛阳贾谊，曾上书汉文帝，劝其改制兴礼，受时大臣反对。<br>拥彗：燕昭王亲自扫路，恐灰尘飞扬，用衣袖挡帚以礼迎贤士邹衍。<br>折节：一作「折腰」。<br>归去来：指隐居。语出东晋陶渊明《归去来辞》。<br>首阳蕨：《史记·伯夷列传》：「武王已平殷乱，天下宗周，而伯夷、叔齐耻之，义不食周粟，隐于首阳山，采薇而食之……遂饿死于首阳山。」《索引》：「薇，蕨也。」按薇、蕨本二草，前人误以为一。<br>含光混世贵无名：此句言不露锋芒，随世俯仰之意。《高士传》：巢父谓许由曰：「何不隐汝形，藏汝光？」<br>自古贤达人：鲍照《拟行路难》：「自古圣贤尽贫贱」。《史记·蔡泽列传》：「四时之序，成功者去。……商君为秦孝公明法令，……功已成矣，而遂以车裂。……白起……功已成矣，而遂赐剑死于杜邮。吴起……功已成矣，而卒枝解。大夫种为越王深谋远计……令越成霸，功已彰而信矣，勾践终负而杀之。此四子者，功成不去，祸至于身？」<br>子胥：伍子胥，春秋末期吴国大夫。《吴越春秋》卷五《夫差内传》：「吴王闻子胥之怨恨也，乃使人赐属镂之剑，子胥……遂伏剑而死。吴王乃取子胥尸，盛以鸱夷之器，投之于江中。」又见《国语·吴语》。<br>陆机雄才岂自保：《晋书·陆机传》载：陆机因宦人诬陷而被杀害于军中，临终叹曰：「华亭鹤唳，岂可复闻乎？」<br>李斯税驾苦不早：李斯，秦国统一六国的大功臣，任秦朝丞相，后被杀。《史记·李斯列传》载：李斯喟然叹曰：「……斯乃上蔡布衣……今人臣之位，无居臣上者，可谓富贵极矣。物极则衰，吾未知所税驾？」《索引》：「税驾，犹解驾，言休息也。」<br>华亭鹤唳讵可闻？上蔡苍鹰何足道：这两句还是写李斯。《史记·李斯列传》：「二世二年七月，具斯五刑，论腰斩咸阳市。斯出狱，与其中子俱执，顾谓其中子曰：『吾欲与若复牵黄犬俱出上蔡东门逐狡兔，岂可得乎！』」《太平御览·卷九二六》：「《史记》曰：『李斯临刑，思牵黄犬、臂苍鹰，出上蔡门，不可得矣。』」<br>秋风忽忆江东行：这句写张翰。《晋书·张翰传》：「张翰，字季鹰，吴郡吴人也。……为大司马东曹掾。……因见秋风起，乃思吴中菰菜、莼羹、鲈鱼脍，曰：『人生贵得适志，何能羁官数千里，以要名爵乎？』遂命驾而归。……或谓之曰：『卿乃纵适一时，独不为身后名邪？』答曰：『使我有身后名，不如即时一杯酒。』时人贵其旷达。」\n3. **翻译**☆\n> 【其一】<br>金杯中的美酒一斗价十千，玉盘里的菜肴珍贵值万钱。<br>但心情愁烦使得我放下杯筷，不愿进餐。拔出宝剑环顾四周，心里一片茫然。<br>想渡过黄河，坚冰堵塞大川；想登太行山，大雪遍布高山。<br>遥想当年，姜太公溪垂钓，得遇重才的文王，伊尹乘舟梦日，受聘在商汤身边。<br>人生的道路何等艰难，何等艰难，歧路纷杂，真正的大道究竟在哪边？<br>坚信乘风破浪的时机定会到来，到那时，将扬起征帆远渡碧海青天。<br>【其二】<br>大道虽宽广如青天，唯独没有我的出路。<br>我不愿意追随长安城中的富家子弟，去搞斗鸡走狗一类的赌博游戏。<br>像冯谖那样弹剑作歌发牢骚，在权贵之门卑躬屈节，那不合我心意。<br>韩信发迹之前被淮阴市井之徒讥笑，贾谊才能超群遭汉朝公卿妒忌。<br>君不见古时燕昭王重用郭隗，拥彗折节、谦恭下士，毫不嫌疑猜忌。<br>剧辛和乐毅感激知遇的恩情，竭忠尽智，以自己的才能为君主效力。<br>而今燕昭王之白骨已隐于荒草之中，还有谁能像他那样重用贤士呢？<br>世路艰难，我只得归去啦！<br>【其三】<br>不要学许由用颍水洗耳，不要学伯夷和叔齐隐居首阳采薇而食。<br>在世上活着贵在韬光养晦，为什么要隐居清高自比云月？<br>我看自古以来的贤达之人，功绩告成之后不自行隐退都死于非命。<br>伍子胥被吴王弃于吴江之上，屈原最终抱石自沉汨罗江中。<br>陆机如此雄才大略也无法自保，李斯以自己悲惨的结局为苦。<br>陆机是否还能听见华亭别墅间的鹤唳？李斯是否还能在上蔡东门牵鹰打猎？<br>你不知道吴中的张翰是个旷达之人，因见秋风起而想起江东故都。<br>生时有一杯酒就应尽情欢乐，何须在意身后千年的虚名？\n4. **背景与赏析**✐\n> 《行路难三首》是唐代伟大诗人李白的组诗作品。这三首诗抒写了诗人在政治道路上遭遇艰难后的感慨。诗中跌宕起伏的感情，跳跃式的思维，以及高昂的气势，使作品具有独特的艺术魅力，成为后人广为称颂的千古名篇。全诗蕴意波澜起伏，跌宕多姿。');
+    </script>
+</body>
+
+</html>

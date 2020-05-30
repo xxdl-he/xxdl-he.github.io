@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 鱼我所欲也\n**作者** *周•孟子*\n1. **全文**⚐\n> 鱼，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。生亦我所欲，所欲有甚于生者，故不为苟得也；死亦我所恶，所恶有甚于死者，故患有所不辟也。如使人之所欲莫甚于生，则凡可以得生者何不用也？使人之所恶莫甚于死者，则凡可以辟患者何不为也？由是则生而有不用也，由是则可以辟患而有不为也。是故所欲有甚于生者，所恶有甚于死者。非独贤者有是心也，人皆有之，贤者能勿丧耳。<br>一箪食，一豆羹，得之则生，弗得则死。呼尔而与之，行道之人弗受；蹴尔而与之，乞人不屑也。万钟则不辩礼义而受之，万钟于我何加焉！为宫室之美、妻妾之奉、所识穷乏者得我与？乡为身死而不受，今为宫室之美为之；乡为身死而不受，今为妻妾之奉为之；乡为身死而不受，今为所识穷乏者得我而为之：是亦不可以已乎？此之谓失其本心。\n2. **注解**▽\n> 亦：也。<br>欲：喜爱。<br>得兼：两种东西都得到。<br>舍：舍弃。<br>取：选取。<br>甚：胜于。<br>于：比。<br>故：所以，因此。<br>苟得：苟且取得，这里是“苟且偷生”的意思。<br>恶：厌恶。<br>患：祸患，灾难。<br>辟：通“避”，躲避。<br>如使：假如，假使。<br>之：用于主谓之间，取消句子的独立性，无实意，不译。<br>莫：没有。<br>则：那么。<br>凡：凡是，一切。<br>得生：保全生命。<br>何不用也：什么手段不可用呢？用，采用。<br>为：做。<br>而：但是。<br>是故：这是因为。<br>非独：不只，不仅非：不独：仅。<br>贤者：有才德，有贤能的人。<br>是：此，这样。<br>心：思想<br>勿丧：不丧失。丧：丧失。<br>箪：古代盛食物的圆竹器。<br>豆：古代一种木制的盛食物的器具。<br>则：就。<br>弗：不。<br>得：得到。<br>呼尔：呼喝（轻蔑地，对人不尊重）。<br>呼尔而与之：呼喝着给他（吃喝）。尔，语气助词。《礼记·檀弓》记载，有一年齐国出现了严重的饥荒。黔敖在路边施粥，有个饥饿的人用衣袖蒙着脸走来。黔敖吆喝着让他吃粥。他说：“我正因为不吃被轻蔑所给予得来的食物，才落得这个地步！<br>行道之人：（饥饿的）过路的行人。<br>蹴：用脚踢。<br>而：表修饰。<br>不屑：因轻视而不肯接受。<br>万钟：这里指高位厚禄。钟，古代的一种量器，六斛四斗为一钟。<br>何加：有什么益处。何介词结构，后置。<br>宫室：住宅。<br>奉：侍奉。<br>穷乏者：穷人。<br>得我：感激我。得：同“德”，感激。<br>与：同“欤”，语气助词。<br>乡：同“向”，先前、从前。<br>已：停止。<br>本心：指本性，天性，良知。<br>通假字<br>故患有所不辟：“辟”通“避”，躲避<br>所识穷乏者得我与：“得”通“德“，恩惠，这里指感激<br>词类活用<br>名词作动词<br>得，恩惠，这里是感激的意思。例句：所识穷乏者得我与。<br>动词作名词<br>生，可以获得生存的手段。例句：由是则生而有不用也。<br>本文主旨<br>恻隐之心，人皆有之；<br>羞恶之心，人皆有之；<br>是非之心，人皆有之。\n3. **翻译**☆\n> 鱼是我所想要的，熊掌也是我所想要的，如果这两种东西不能同时得到，那么我就只好放弃鱼而选取熊掌了。生命是我所想要的，道义也是我所想要的，如果这两样东西不能同时都具有的话，那么我就只好牺牲生命而选取道义了。生命是我所想要的，但我所想要的还有比生命更重要的东西，所以我不做苟且偷生的事。死亡是我所厌恶的，但我所厌恶的还有超过死亡的事，因此有灾祸我也不躲避。如果人们所想要的东西没有能比生命更重要的，那么凡是能够用来求得生存的手段，哪一样不可以采用呢？如果人们所厌恶的事情没有超过死亡的，那么凡是可以躲避祸患的办法什么不可以做呢？采用某种手段就能够活命，可是有的人却不肯采用；采用某种办法就能够躲避灾祸，可是有的人也不肯采用。由此可见，他们所想要的有比生命更宝贵的东西（那就是“义”）；他们所厌恶的，有比死亡更严重的事（那就是“不义”）。不仅贤人有这种本性，人人都有，只不过贤能的人不丧失罢了。<br>一碗食物，一碗汤，得到它就能活下去，得不到它就会饿死。如果盛气凌人地呼喝着给他吃，饥饿的行人也不愿接受；用脚踢给别人吃，就连乞丐也会因轻视而不肯接受。高官厚禄却不辨是否合乎礼义就接受了它。这样，高官厚禄对我有什么好处呢？是为了住宅的华丽、妻妾的侍奉和认识的穷人感激我吗？以前有人为了大义宁死也不愿接受，现在却为了住宅的华丽却接受了它；以前有人为了大义宁死也不愿接受，现在却为了妻妾的侍奉却接受了它；以前有人为了大义宁死也不愿接受，现在为了认识的穷人感激自己却接受了它。这种做法不是可以让它停止了吗？这就叫做丧失了人所固有的本性。\n4. **背景与赏析**✐\n> 本文是孟子以他的性善论为依据，对人的生死观进行深入讨论的一篇代表作。他从人应如何对待自己的欲望入手，在生与死、利与义、守义与失义等方面，层层深入、正反对比地论证了义重于生，必须舍生取义。还强调指出“非独贤者有是心（舍生取义之心）也，人皆有之，贤者能勿丧耳”，人如果经不住万钟、宫室、妻妾、施恩的诱惑，必然会“失其本心（舍生取义之心）”。\n《鱼我所欲也》一文用面对鱼和熊掌之间的抉择，比喻面对生命和大义之间的选择，孟子会毅然“舍生而取义者也”。这当中的“义”和文章最后的“此之谓失其本心”的“本心”都是指人的“羞恶之心”（按如今的通俗理解，可以理解为“廉耻之心”）。因为人只有拥有“羞恶之心”，才能分清哪些是道德底线可以承受的事，哪些是道德范围所不接纳的事，哪些是“所欲有甚于生”的事，这样才能不被“宫室之美”、“妻妾之奉”和“所识穷乏者得我”所诱惑，而像“不食嗟来之食”的人一样，内心有一种凛然的“义”。\n《鱼我所欲也》一文本身的结构和材料所揭示的中心论点应当是：人皆有“所欲有甚于生，所恶有甚于死”的“本心”，“贤者能勿丧耳”。如果把《鱼》文分成三段来分析，是不难说明这一观点的。本文逻辑严密，析理精深，比喻、排比、对比等修辞手法的运用，使语言生动、流畅，气充词沛，颇具说服力。');
+    </script>
+</body>
+
+</html>

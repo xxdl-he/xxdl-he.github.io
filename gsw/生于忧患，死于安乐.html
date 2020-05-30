@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 生于忧患，死于安乐\n**作者** *周•孟子*\n1. **全文**⚐\n> 舜发于畎亩之中，傅说举于版筑之间，胶鬲举于鱼盐之中，管夷吾举于士，孙叔敖举于海，百里奚举于市。<br>故天将降大任于是人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，曾益其所不能。（是人一作：斯人）<br>人恒过，然后能改；困于心衡于虑，而后作；征于色发于声，而后喻。入则无法家拂士，出则无敌国外患者，国恒亡。<br>然后知生于忧患而死于安乐也。\n2. **注解**▽\n> 舜：姚姓，名重华。唐尧时耕于历山（在今山东济南东南，一说在今山西永济东南），“父顽，母嚣，弟傲，能和以孝”，尧帝使其人山林川泽，遇暴风雷雨，舜行不迷，于是传以天子之位。国名虞，史称虞舜。事迹见于《尚书·尧典》及《史记·五帝本纪》等。<br>发：起，指任用。<br>畎（quǎn）亩：田亩，此处意为耕田。畎，田间水渠。<br>傅说（fùyuè）：殷商时为胥靡（一种刑徒），筑于傅险（又作傅岩，在今山西平陆东）。商王武丁欲兴殷，梦得圣人，名曰说，视群臣皆非，使人求于野，得傅说。见武丁，武丁曰：“是也。”与之语，果圣人，举以为相，殷国大治。遂以傅险为姓，名为傅说。事迹见于《史记·殷本纪》等。<br>举：被选拔。<br>版筑：筑墙的时候在两块夹板中间放土，用杵捣土，使它坚实。筑，捣土用的杵。<br>胶鬲（gé）：商纣王大臣，与微子、箕子、王子比干同称贤人。<br>鱼盐：此处意为在海边捕鱼晒盐。《史记》称燕在渤碣之间，有鱼盐之饶；齐带山海，多鱼盐。<br>管夷吾：管仲，颍上（今河南许昌）人，家贫困。辅佐齐国公子纠，公子纠未能即位，公子小白即位，是为齐桓公。齐桓公知其贤，释其囚，用以为相，尊称之为仲父。《史记·管晏列传》：“管仲既用，任政于齐，齐桓公以霸。九合诸侯，一匡天下，管仲之谋也。”<br>士：狱官。<br>孙叔敖（áo）：蒍姓，名敖，字孙叔，一字艾猎。春秋时为楚国令尹（宰相）。本为“期思之鄙人”，期思在今河南固始，偏僻之地称为鄙。<br>海：海滨。<br>百里奚（xī）：又作百里傒。本为虞国大夫。晋国灭虞国，百里奚与虞国国君一起被俘至晋国。晋国嫁女于秦，百里奚被当作媵臣陪嫁到秦国。百里奚逃往楚国，行至宛（今河南南阳），为楚国边界之鄙人所执。秦穆公闻其贤，欲重赎之，恐楚人不与，乃使人谓楚曰：“吾媵臣百里奚在焉，请以五羖羊皮赎之。”楚人于是与之。时百里奚年已七十余，至秦，秦穆公亲释其囚，与语国事三日，大悦。授以国政，号称“五羖大夫”。史称秦穆公用百里奚、蹇叔、由余为政，“开地千里，遂霸西戎”，成为“春秋五霸”之一。事迹见于《史记·秦本纪》。<br>市：市井。<br>故：所以。<br>任：责任，担子。<br>是：代词，这，这些。<br>也：助词，用在前半句的末尾，表示停顿一下，后半句将要加以解说。<br>必：一定。<br>苦：动词的使动用法，使……苦恼。<br>心志：意志。<br>劳：动词的使动用法，使……劳累。<br>饿：动词的使动用法，使……饥饿。<br>体肤：肌肤。<br>空乏：形容词的使动用法，使……穷困。<br>拂乱：形容词的使动用法，使……颠倒错乱。拂，违背，不顺。乱，错乱。<br>所为：所行。<br>所以：用来（通过那样的途径来……）。<br>动：动词的使动用法，使……惊动。<br>忍：形容词的使动用法，使……坚韧。<br>曾益：增加。曾，通“增”。<br>能：才干。<br>恒：常常，总是。<br>过：过错，过失。<br>困于心：心中有困苦。<br>衡于虑：思虑堵塞。衡，通“横”，梗塞，指不顺。<br>作：奋起，指有所作为。<br>征于色：面色上有征验，意为面容憔悴。征，征验，征兆。色，颜面，面色。赵岐《孟子注》：“若屈原憔悴，渔父见而怪之。”《史记·屈原贾谊列传》：“屈原至于江滨，被发行吟泽畔，颜色憔悴，形容枯槁。渔父见而问之曰：‘子非三闾大夫与？何故而至此？’屈原曰：‘举世混浊我独清，众人皆醉我独醒，是以见放。’”<br>发于声：言语上有抒发，意为言语愤激。赵岐《孟子注》：“若甯戚商歌，桓公异之。”甯戚，春秋时卫国人。家贫，为人挽车。至齐，喂牛于车下，齐桓公夜出迎客，甯戚见之，疾击其牛角而商歌。歌曰：“南山矸，白石烂，生不逢尧与舜禅。短布单衣适至骭，从昏饭牛薄夜半，长夜漫漫何时旦。”齐桓公召与语，悦之，以为大夫。<br>而后喻：然后人们才了解他。喻，知晓，明白。<br>入：名词活用作状语，在国内。<br>法家：有法度的世臣。<br>拂（bì）士：辅佐君主的贤士。拂，通“弼”，辅佐。<br>出：名词活用作状语，在国外。<br>敌国：实力相当、足以抗衡的国家。<br>外患：来自国外的祸患。<br>恒：常常。<br>亡：灭亡。<br>生于忧患：忧患使人生存发展。<br>死于安乐：享受安乐使人萎靡死亡。\n3. **翻译**☆\n> 舜从田野耕作之中被起用，傅说从筑墙的劳作之中被起用，胶鬲从贩鱼卖盐中被起用，管夷吾被从狱官手里救出来并受到任用，孙叔敖从海滨隐居的地方被起用，百里奚被从奴隶市场里赎买回来并被起用。<br>所以上天要把重任降临在某人的身上，必定要先使他的内心痛苦，使他的筋骨劳累，使他经受饥饿之苦，以致肌肤消瘦，使他受贫困之苦，扰乱其人业已开始的行动，这样来使他的心灵受到震撼，使他的性情坚忍起来，增加他所不具备的能力。<br>人常常犯错，然后才能改正；内心忧困，思想阻塞，然后才能奋起；心绪显露在脸色上，表达在声音中，然后才能被人了解。一个国家，在内如果没有坚守法度的大臣和足以辅佐君王的贤士，在外没有与之匹敌的邻国和来自外国的祸患，就常常会有覆灭的危险。<br>这样，就知道忧愁患害足以使人生存，安逸享乐足以使人灭亡的道理了。\n4. **背景与赏析**✐\n> ');
+    </script>
+</body>
+
+</html>

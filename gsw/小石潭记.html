@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 永州八记 · 其四 · 至小丘西小石潭记\n**作者** *唐•柳宗元*\n1. **全文**⚐\n> 从小丘西行百二十步，隔篁竹，闻水声，如鸣佩环，心乐之。伐竹取道，下见小潭，水尤清冽。全石以为底，近岸，卷石底以出，为坻，为屿，为嵁，为岩。青树翠蔓，蒙络摇缀，参差披拂。<br>潭中鱼可百许头，皆若空游无所依。日光下澈，影布石上，佁然不动；俶尔远逝，往来翕忽，似与游者相乐。<br>潭西南而望，斗折蛇行，明灭可见。其岸势犬牙差互，不可知其源。<br>坐潭上，四面竹树环合，寂寥无人，凄神寒骨，悄怆幽邃。以其境过清，不可久居，乃记之而去。<br>同游者，吴武陵，龚古，余弟宗玄。隶而从者，崔氏二小生：曰恕己，曰奉壹。\n2. **注解**▽\n> 从：自，由。<br>小丘：小山丘（在小石潭东边）。<br>西：向西，名词作状语。<br>行：走。<br>篁（huáng）竹：成林的竹子。<br>如鸣佩环：好像人身上佩戴的佩环相碰击发出的声音。鸣，使……发出声音；佩、环，玉质装饰物。<br>乐：以……为乐，对……感到快乐（意动用法）。<br>伐：砍伐。<br>取：这里指开辟。<br>下见小潭：向下看就看见一个小潭。见，看见；下，向下。<br>水尤清冽：水格外（特别）清澈。尤，格外、特别；冽，凉。清冽，清凉。<br>全石以为底：即以全石为底（潭）把整块石头当作底部。以，把；为，当作。<br>「近岸，卷石底以出」句：靠近岸的地方，石底有些部分翻卷过来露出水面。近，靠近；岸，岸边；卷，弯曲；以，相当于「而」，表修饰，不译。<br>「为坻（chí），为屿，为嵁（kān），为岩」句：成为坻、屿、嵁、岩各种不同的形状。坻，水中高地；屿，小岛；嵁，不平的岩石；岩，悬崖。<br>翠蔓：翠绿的藤蔓。<br>「蒙络摇缀，参差披拂」句：覆盖缠绕，摇动下垂，参差不齐，随风飘动。<br>可百许头：大约有一百来条。文中指小潭里的鱼大约有一百来条。可，大约；许，用在数词后表示约数，相当于同样用法的「来」。<br>皆若空游无所依：都好像在空中游动，什么依托也没有。空：在空中，名词作状语；皆：全、都。<br>「日光下澈，影布石上」句：阳光向下直照到水底，鱼的影子好像映在水底的石头上。下，向下照射；布，照映、分布；澈，一作「彻」，穿透。<br>佁（yǐ）然不动：（鱼影）呆呆地一动不动。佁然，呆呆的样子。<br>俶（chù）尔远逝：忽然间向远处游去了。俶尔，忽然。<br>往来翕（xī）忽：来来往往，轻快敏捷。翕忽，轻快敏捷的样子；翕，迅疾。<br>斗折：像北斗七星那样曲折。<br>蛇行：像蛇爬行那样弯曲。<br>明灭可见：若隐若现。灭，暗、看不见。<br>「斗折蛇行，明灭可见」句：（溪水）曲曲折折，（望过去）一段看得见，一段又看不见。<br>犬牙差（cī）互：像狗的牙齿那样互相交错。犬牙，像狗的牙齿一样；差互，互相交错。<br>「悽神寒骨，悄（qiǎo）怆（chuàng）幽邃（suì）」句：使人感到心神凄凉，寒气透骨，幽静深远，弥漫着忧伤的气息。凄、寒，使动用法，使……感到凄凉，使……感到寒冷；悄怆，忧伤的样子；邃，深。<br>以其境过清：因为那种环境太过凄清。以，因为；其，那；清，凄清。<br>「不可久居，乃记之而去」句：不能长时间停留，于是记下小石潭的情况就离开了。居，待、停留；乃，于是……就；之，代游小石潭这件事；去，离开。<br>吴武陵：作者的朋友，也被贬在永州。<br>龚古：作者的朋友。<br>宗玄：作者的堂弟。<br>「隶而从者，崔氏二小生」句：跟着我一同去的，有姓崔的两个年轻人。隶而从，跟着同去的；隶，作为随从，动词；崔氏，指柳宗元姐夫崔简；小生，年轻人。\n3. **翻译**☆\n> 从小丘向西走一百二十多步，隔着竹林，可以听到流水的声音，好像人身上佩带的玉佩、玉环相互碰击发出的声音，心里十分高兴。砍伐竹子，开辟道路，向下看见一个小潭，水格外清澈。小潭以整块石头为底，靠近岸边的地方，石底有些部分翻卷出来，露出水面，成为水中的高地，像是水中的小岛，也有高低不平的石头和小岩石（露了出来）。青葱的树木，翠绿的藤蔓，覆盖缠绕，摇动连结，参差不齐，随风飘拂。<br>潭中的鱼大约有百多条，都好像在空中游动，什么依靠也没有。阳光直照到水底，鱼的影子映在水底的石上。鱼儿呆呆地一动不动，忽然向远处游去，来来往往，轻快敏捷，好像在和游玩的人逗玩。　　向小石潭的西南方望去，溪岸像北斗七星一样曲折，像蛇爬行一样弯曲，望过去一段看得见，一段看不见。溪岸的形状像狗的牙齿那样参差不齐，不能知道溪水的源头在哪里。<br>我坐在潭边，四下里竹林和树木包围着，寂静没有旁人。使人感到心神凄凉，寒气透骨，幽静深远，弥漫着忧伤的气息。因为那种环境太过凄清，不能长时间停留，于是记录下了此地就离开。<br>一同去游览的人有吴武陵、龚古、我的弟弟宗玄。我带着一同去的，有姓崔的两个年轻人。一个名叫恕己，一个名叫奉壹。\n4. **背景与赏析**✐\n> 柳宗元于唐顺宗永贞元年（公元805年）因拥护王叔文的改革，被贬为永州司马，王叔文被害。政治上的失意，使他寄情于山水，柳宗元贬官之后，为排解内心的愤懑之情，常常不避幽远，伐竹取道，探山访水，并通过对景物的具体描写，抒发自己的不幸遭遇，此间共写了八篇山水游记，后称《永州八记》。\n《小石潭记》保持了《永州八记》一贯的行文风格，察其微，状其貌，传其神。是一篇充满了诗情画意、情景交融的山水游记散文。');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 太常引 · 建康中秋夜为吕叔潜赋\n**作者** *宋•辛弃疾*\n1. **全文**⚐\n> 一轮秋影转金波，飞镜又重磨。把酒问姮娥，被白发、欺人奈何。<br>乘风好去，长空万里，直下看山河。斫去桂婆娑，人道是、清光更多。\n2. **注解**▽\n> 太常引：词牌名。据《填词名解》载：「《太常引》，汉周泽为太常，坚持斋戒，其妻窥内问之，泽大怒，以为干扰其斋戒，收送监狱。故有居世不谐，为『太常妻』之谚。後人取其事以名词。或曰：『太常，导引之曲也。』」案，太常，官名也，九卿之一，司祭祀礼乐、掌宗庙选试。秦始置奉常，西汉景帝改为太常，历代沿置，至清末废。引：古代乐曲体裁之一。《钦定词谱》云：「《太和正音谱》注『仙吕宫』。一名《太清引》。韩涧泉词有『小春时候腊前梅』句，名《腊前梅》。」是调初有四十八字、四十九字、五十字及平韵、仄韵多格。後宋元人大多填四十九字体，《钦定词谱》谓此调仅二体，以稼轩词为正体，所异者前阕第二句或五字全词四十九字或六字全词五十字耳，俱有宋元人词可校。正体，双调四十九字，前阕四平韵，後阕三平韵。间用长短句，无对仗要求。後阕首次句，四言，有对仗者，亦有不对仗者；第三、四句，五言，因中有句读相分（古人应为句义分割），亦可不对仗。前後阕两七言结句均作上三下四式，语义不可断，且下四字必作「平平去平」，平仄不可变，第六字尤用去声。此调宜轻悠，亦宜婉约，遣字不需太重、太猛。可有波澜，但无需大浪。<br>建康中秋夜为吕叔潜赋：广信书院本作「建康中秋夜为吕潜叔赋」，兹从四卷本丙集。四卷本无「夜」字。<br>吕叔潜：名大虬，生平事迹不详，似为作者声气相应的朋友。南宋·汪玉山《文定集·卷十五·与吕叔潜》中有「魏公再相」及「伯恭今安在两日前作书托韩无咎附便」等语。宋·陈子象《庚溪诗话·卷下》：「吕叔潜大虬言镇江丹阳玉乳泉壁间一绝云：『骑马出门三月暮，杨花无奈雪漫天。客情最苦夜难度，宿处先寻无杜鹃。』」知吕氏名大虬。查吕祖谦《东莱集·卷九·吕氏家传》，大虬为吕好问孙，乃祖谦之诸父。<br>金波：形容月光浮动，因亦指月光。《汉书·卷二十二·礼乐志》：「月穆穆以金波」。唐·颜师古注：「言月光穆穆，若金之波流也」。宋·苏东坡《洞仙歌·余七岁时。见眉山老尼。姓朱，忘其名，年九十岁，自言尝随其师入蜀主孟昶宫中。一日大热，蜀主与花蕊夫人夜纳凉摩诃池上，作一词。朱具能记之。今四十年，朱已死久矣，人无知此词者。但记其首两句，暇日寻味，岂〈洞仙歌令〉乎，乃为足之云》词：「试问夜如何？夜已三更，金波淡，玉绳低转」。<br>飞镜：飞天之明镜，指月亮。唐·甘子布《光赋》：「银河披曀，金飔送清，孤圆上魄，飞镜流明」。唐·李太白《把酒问月》诗：「皎如飞镜临丹阙，绿烟灭尽清辉发。」<br>「飞镜又重磨」句：喻月重圆。南北朝·徐孝穆《玉台新咏·卷十·古绝句四首》：「破镜飞上天。」唐·吴兢《乐府古题要解·卷下·藁砧今何在》：「『破镜飞上天』，言月半当还也。」<br>姮（Héng）娥：即嫦娥，传说中的月中仙女。西汉·刘中垒《淮南子·卷六·览冥训》：「羿请不死之药于西王母，姮娥窃以奔月。」高诱注，她後来「得仙，奔入月中为月精」。<br>「被白发、欺人奈何。」句：唐·薛大拙《春日使府寓怀二首·其一》诗：「青春背我堂堂去，白发欺人故故生。」<br>「斫（zhuó）去桂婆娑。人道是、清光更多。」三句：唐·杜少陵《一百五日夜对月》诗：「斫却月中桂，清光应更多。」唐·段柯古《酉阳杂俎·前集·卷一·天咫》：「旧言月中有桂，有蟾蜍，故异书言月桂高五百丈，下有一人常斫之，树创随合。人姓吴名刚，西河人，学仙有过，谪令伐树。」唐·韩昌黎《月蚀诗效玉川子作》诗：「玉阶桂树闲婆娑。」斫，砍；桂，桂树；婆娑，树影摇曳皃。\n3. **翻译**☆\n> 一轮缓缓移动的秋月洒下万里金波，就像那刚磨亮的铜镜又飞上了天廓。我举起酒杯问那月中的嫦娥：怎么办呢？白髮日增，好像故意欺负我。<br>我要乘风飞上万里长空，俯视祖国的大好山河。还要砍去月中摇曳的桂树枝柯，人们说，这将使月亮洒下人间的光辉更多。\n4. **背景与赏析**✐\n> 此词通过古代的神话传说，强烈地表达了自己反对妥协投降、立志收复中原失土的政治理想。全词想象丰富，把超现实的奇思妙想与现实中的思想矛盾结合起来，体现了浓厚的浪漫主义色彩。');
+    </script>
+</body>
+
+</html>

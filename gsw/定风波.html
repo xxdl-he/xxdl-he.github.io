@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 定风波\n**作者** *宋•苏轼*\n1. **全文**⚐\n> 莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。<br>料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。\n2. **注解**▽\n> 定风波：词牌名。原为唐教坊曲。《张子野词》入「双调」。李德润词名《定风流》，张子野词名《定风波令》。又名《捲春空》、《醉琼枝》。敦煌曲子词联章两首，其一：「攻书学剑能几何，争如沙塞骋偻侈。手执绿沉枪似铁，明月，龙泉三尺斩新磨。        堪羡昔时军伍，谩夸儒士德能康。四塞忽闻狼烟起，问儒士，谁人敢去定风波。」其二：「征战偻罗干练，伶俐，机灵未是功，儒士偻侈转更加。三策张良非恶弱，谋略，汉兴楚灭本由他。    项羽翘据无路，酒後难消一曲歌。霸王 虞姬皆自刎，当本，便知儒士定风波。」两词为武将与儒士回答，「定风波」以喻平定社会动乱，词风豪健，为此调之始词。另有敦煌曲子词三首为讲述伤寒病症口诀。此体始自五代欧阳炯，为通用之正体。双调六十二字，前阕五句三平韵叶二仄韵，後阕五句二平韵叶四仄韵。另有双调六十三字，前阕五句三平韵叶两仄韵，後阕六句四仄韵叶两平韵；双调六十字，前阕五句三平韵叶两仄韵，後阕五句两平韵叶两仄韵；双调六十字，前後阕各五句两平韵叶两仄韵诸变体。《乐章集》演为慢词，一入「双调」，一入「林钟商」，并全用仄韵。此调以七言句式为主，每句用韵，于平声韵中三叶仄韵，插入三个两字句，调势于流畅时忽然顿挫转折，因而韵律复杂，其中之两字句很难处理，用此调时应注意格律与词意之转折变化。此调适应之题材较广。从始词来看，此调宜于表现社会重大题材，亦宜言志与酬赠。欧阳炯、孙孟光、蔡申道、陈西麓等亦用以抒闺情。魏夫人用以写暮春感怀，词情极为婉约。欧阳文忠词六首，多写人生感慨。<br>题注：傅子立注：「公旧序云：『三月七日，沙湖道中遇雨。雨具先去，同行皆狼狈，余独不觉。已乃遂晴，故作此词。』」刘尚荣按：「此条题注原钞于调名下，今移词後。元延祐本删『公旧序云』四字，径以此注为词题。又脱『独』、『词』等字，『已乃』作『已而』。《苏长公二妙集》本无『雨具先去』四字，无『故』字。明吴讷钞本『同行』作『同去』。龙本『故作此词』作『故作此』。」<br>吟啸：傅子立注：「《晋书·阮籍传》：『阮籍登山临水，啸咏自若。』」刘尚荣按：「事详《晋书·卷四十九·阮籍传》。」<br>竹杖芒鞋：傅子立注：「无则诗：『腾腾兀兀恣闲行，竹杖芒鞋称野情。』」刘尚荣按：「《全唐诗·卷八百二十五》收无则诗三首，无此句，则为其佚诗也。宋·陈芸居编《江湖小集·卷二十二·李雪林〈剪绡集〉》有《重寄》集句诗，首句云『竹杖芒鞋称野情』，署无则句。又『腾腾兀兀恣闲行』二句诗别见于宋刊施顾《注苏诗·卷十二·答任师中、家汉公》『芒鞋老菑畬』句下小字夹注，署名元微之名。然《元氏长庆集》中无此二句。待考。」芒，傅注诸本皆误作「芸」，据元延祐本改；鞋，龙本作「芒鞵」。<br>一蓑烟雨：傅子立注：「郑都官诗：『往来烟波非定居，生涯蓑笠外无馀。』魏草堂诗：『何日扁舟去，江上负烟蓑。』」刘尚荣按：「郑诗乃罗邺《钓翁》诗句，见《全唐诗·卷六百五十四》，『往来』原作『来往』，题下原注云：『一作郑谷诗。』然而《全唐诗》卷内郑都官未收此诗。又，《古今事文类聚·前集卷三十七》收此诗，署名郑都官作。魏句见魏草堂《东观集·卷七·暮春闲望》，上句原作『扁舟何日去』。」蓑，元延祐本、《东坡外集》作「莎」。<br>料峭：傅子立注：「公有诗云：『渐觉春风料峭寒。』」刘尚荣按：「句出《送范德孺》，见《东坡续集·卷三》，『春风』原作『东风』。」<br>萧瑟：傅注本、毛本作「潇洒」。按，东坡又有《独觉》诗曰：「回首向来萧瑟处，也无风雨也无晴。」于此词句同，因疑「萧瑟」更近苏词原貌。兹从元延祐本。\n3. **翻译**☆\n> 三月七日，在沙湖道上赶上了下雨，拿着雨具的仆人先前离开了，同行的人都觉得很狼狈，只有我不这么觉得。过了一会儿天晴了，就做了这首词。<br>不要害怕树林中风雨的声音，何妨放开喉咙吟唱从容而行。拄竹杖曳草鞋轻便胜过骑马，这都是小事情又有什么可怕？披一蓑衣任凭湖海中度平生。<br>料峭的春风把我的酒意吹醒，身上略略微微感到一些寒冷，看山头上斜阳已露出了笑脸，回首来程风雨潇潇的情景，归去不管它是风雨还是放晴。\n4. **背景与赏析**✐\n> 此词通过野外途中偶遇风雨这一生活中的小事，於简朴中见深意，於寻常处生奇景，表现出旷达超脱的胸襟，寄寓着超凡脱俗的人生理想。上阕着眼於雨中，下阕着眼於雨後，全词体现出一个正直文人在坎坷人生中力求解脱之道，篇幅虽短，但意境深邃，内蕴丰富，诠释着作者的人生信念，展现着作者的精神追求。');
+    </script>
+</body>
+
+</html>

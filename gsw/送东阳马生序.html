@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 送东阳马生序\n**作者** *明•宋濂*\n1. **全文**⚐\n> 余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道 ，又患无硕师、名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。<br>当余之从师也，负箧曳屣，行深山巨谷中，穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意。以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。<br>今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？<br>今诸生学于太学，县官日有廪稍之供，父母岁有裘葛之遗，无冻馁之患矣；坐大厦之下而诵《诗》《书》，无奔走之劳矣；有司业、博士为之师，未有问而不告，求而不得者也；凡所宜有之书，皆集于此，不必若余之手录，假诸人而后见也。其业有不精，德有不成者，非天质之卑，则心不若余之专耳，岂他人之过哉！<br>东阳马生君则，在太学已二年，流辈甚称其贤。余朝京师，生以乡人子谒余，撰长书以为贽，辞甚畅达，与之论辩，言和而色夷。自谓少时用心于学甚劳，是可谓善学者矣！其将归见其亲也，余故道为学之难以告之。谓余勉乡人以学者，余之志也；诋我夸际遇之盛而骄乡人者，岂知余者哉！\n2. **注解**▽\n> 硕（shuò）师：学问渊博的老师。<br>游：交往。<br>尝：曾。<br>趋：奔赴。<br>乡之先达：当地在道德学问上有名望的前辈。这里指浦江的柳贯、义乌的黄溍等古文家。<br>执经叩问：携带经书去请教。<br>稍降辞色：把言辞放委婉些，把脸色放温和些。辞色，言辞和脸色。<br>援疑质理：提出疑难，询问道理。<br>叱咄（chì duō）：训斥、呵责。<br>俟（sì）：等待。<br>忻（xīn）：同“欣”。<br>卒：终于。<br>箧（qiè）：箱子。<br>曳屣（yè xǐ）：拖着鞋子。<br>穷冬：隆冬。<br>皲（jūn）裂：皮肤因寒冷干燥而开裂。<br>僵劲：僵硬。<br>媵人：陪嫁的女子。这里指女仆。<br>持汤沃灌：指拿热水喝或拿热水浸洗。汤，热水；沃灌，浇水洗。<br>衾（qīn）：被子。<br>逆旅主人：旅店主人。<br>日再食：每日两餐。<br>被（pī）绮绣：穿着华丽的绸缎衣服。被，同“披”；绮，有花纹的丝织品。<br>朱缨宝饰：红穗子上穿有珠子等装饰品。<br>腰白玉之环：腰间悬着白玉圈。<br>容臭：香袋子。<br>臭（xiù）：气味，这里指香气。<br>烨（yè）然：光采照人的样子。<br>缊（yùn）袍：粗麻絮制作的袍子。<br>敝衣：破衣。<br>耄（mào）老：年老。八九十岁的人称耄。宋濂此时已六十九岁。<br>幸预：有幸参与。君子指有道德学问的读书人。<br>缀：这里意为“跟随”。<br>谬称：不恰当地赞许。这是作者的谦词。<br>诸生：指太学生。<br>太学：明代中央政府设立的教育士人的学校，称作太学或国子监。<br>县官：这里指朝廷。<br>廪（lǐn）稍：当时政府免费供给的俸粮称“廪”或“稍”。<br>裘（qiú）：皮衣。<br>葛：夏布衣服。<br>遗（wèi）：赠，这里指接济。<br>司业、博士：分别为太学的次长官和教授。<br>非天质之卑：如果不是由于天资太低下。<br>流辈：同辈。<br>朝：旧时臣下朝见君主。宋濂写此文时，正值他从家乡到京城应天（南京）见朱元璋。<br>以乡人子：以同乡之子的身份。<br>谒（yè）：拜见。<br>撰（zhuàn）：同“撰”，写。<br>长书：长信。<br>贽（zhì）：古时初次拜见时所赠的礼物。<br>夷：平易。<br>“谓余勉乡人以学者，余之志也”句：认为我是在勉励同乡人努力学习，这是说到了我的本意。<br>诋：毁谤。<br>际遇之盛：遭遇的得意，指得到皇帝的赏识重用。<br>骄乡人：对同乡骄傲。<br>归见：回家探望。\n3. **翻译**☆\n> 我年幼时就爱学习。因为家中贫穷，无法得到书来看，常向藏书的人家求借，亲手抄录，约定日期送还。天气酷寒时，砚池中的水冻成了坚冰，手指不能屈伸，我仍不放松读书。抄写完后，赶快送还人家，不敢稍稍超过约定的期限。因此人们大多肯将书借给我，我因而能够看各种各样的书。已经成年之后，更加仰慕圣贤的学说，又苦于不能与学识渊博的老师和名人交往，曾快步走（跑）到百里之外，手拿着经书向同乡前辈求教。前辈德高望重，门人学生挤满了他的房间，他的言辞和态度从未稍有委婉。我站着陪侍在他左右，提出疑难，询问道理，低身侧耳向他请教；有时遭到他的训斥，表情更为恭敬，礼貌更为周到，不敢答复一句话；等到他高兴时，就又向他请教。所以我虽然愚钝，最终还是得到不少教益。<br>当我寻师时，背着书箱，把鞋后帮踩在脚后跟下，行走在深山大谷之中，严冬寒风凛冽，大雪深达几尺，脚和皮肤受冻裂开都不知道。到学舍后，四肢僵硬不能动弹，仆人给我灌下热水，用被子围盖身上，过了很久才暖和过来。住在旅馆，主人每天只提供两顿饭，没有新鲜肥嫩的美味享受。同学舍的求学者都穿着锦绣衣服，戴着有红色帽带、饰有珍宝的帽子，腰间挂着白玉环，左边佩戴着刀，右边备有香囊，光彩鲜明，如同神人；我却穿着旧棉袍、破衣服处于他们之间，毫无羡慕的意思。因为心中有足以使自己高兴的事，并不觉得吃穿的享受不如人家。我的勤劳和艰辛大概就是这样。<br>如今我虽已年老，没有什么成就，但所幸还得以置身于君子的行列中，承受着天子的恩宠荣耀，追随在公卿之后，每天陪侍着皇上，听候询问，天底下也不适当地称颂自己的姓名，更何况才能超过我的人呢？<br>如今的学生们在太学中学习，朝廷每天供给膳食，父母每年都赠给冬天的皮衣和夏天的葛衣，没有冻饿的忧虑了；坐在大厦之下诵读经书，没有奔走的劳苦了；有司业和博士当他们的老师，没有询问而不告诉，求教而无所收获的了；凡是所应该具备的书籍，都集中在这里，不必再像我这样用手抄录，从别人处借来然后才能看到了。他们中如果学业有所不精通，品德有所未养成的，如果不是天赋、资质低下，就是用心不如我这样专一，难道可以说是别人的过错吗！<br>东阳马生君则，在太学中已学习二年了，同辈人很称赞他的德行。我到京师朝见皇帝时，马生以同乡晚辈的身份拜见我，写了一封长信作为礼物，文辞很顺畅通达，同他论辩，言语温和而态度谦恭。他自己说少年时对于学习很用心、刻苦，这可以称作善于学习者吧！他将要回家拜见父母双亲，我特地将自己治学的艰难告诉他。如果说我勉励同乡努力学习，则是我的志意；如果诋毁我夸耀自己遭遇之好而在同乡前骄傲，难道是了解我吗？\n4. **背景与赏析**✐\n> 《送东阳马生序》是明初宋濂送给他的同乡浙江东阳县青年马君则的文章。在这篇赠言里，作者叙述个人早年虚心求教和勤苦学习的经历，勉励青年人珍惜良好的读书环境，专心治学。文中生动而具体地描述了自己借书求师之难，饥寒奔走之苦，并与太学生优越的条件加以对比，有力地说明学业能否有所成就，主要在于主观努力，不在天资的高下和条件的优劣，这种认识在今天仍有借鉴意义。');
+    </script>
+</body>
+
+</html>

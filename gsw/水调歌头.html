@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 水调歌头 · 明月几时有\n**作者** *宋•苏轼*\n1. **全文**⚐\n> 明月几时有，把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间！<br>转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。\n2. **注解**▽\n> 水调歌头：词牌名。调名来源自《水调》曲。《水调》曲，隋炀帝所制也。唐·刘鼎卿《隋唐嘉话》：「炀帝凿汴河，自制《水调歌》。」宋·王颐堂《碧鸡漫志·卷四·〈水调歌〉》引《脞说》：「《水调》《河传》，炀帝将幸江都时自制，声韵悲切，帝喜之。乐工王令言谓其弟子曰：『不返矣，《水调》《河传》但有去声。』」《〈樊川诗集〉注·卷三·〈扬州〉诗》「谁家唱《水调》」句自注亦云：「炀帝凿汴河成，自造《水调》。」然《水调》究制于开汴河前或汴河开成後，三家说法不一，但为炀帝自制，则无异辞。逮唐，《水调》已为传唱不衰之名曲。盛唐王龙标有《听流人〈水调子〉》诗：「岭色千重万重雨，断弦收与泪痕深。」唐·段安节《乐府杂录·歌》：「开元中，内人有许和子者，本吉州永新县乐家女也，开元末选入宫，即以永新名之，籍于宜春院。既美且慧，善歌，能变新声。……洎渔阳之乱，六宫星散，永新为一士人所得。（金吾将军）韦青避地广陵，因月夜凭阑于小河之上，忽闻舟中奏《水调》者，曰：『此永新歌也。』乃登舟与永新对泣久之。青始亦晦其事。」可见《水调》为时人所熟。玄宗本人亦喜听此曲，奔蜀之前，登楼置酒，令善唱《水调》者登楼而歌，「闻之，潸然出涕」（唐·李朱崖《次柳氏旧闻》，唐·郑延美《明皇杂录》）。中唐白乐天有《听〈水调〉》诗：「不会当时翻曲意，此声肠断为何人？」晚唐罗昭谏亦有《席上歌〈水调〉》：「若使炀皇魂魄在，为君应合过江来。」至五代北宋，《水调》仍在传唱。宋·郑仲贤《南唐旧事》载「（元宗）尝乘醉，命乐工杨花飞奏《水调辞》进酒。」南唐冯正中《抛球乐》亦有「《水调》声长醉里听」之句。北宋·张子野《天仙子》之「《水调》数声持酒听」更为人所熟。与子野同时而略晚的刘原甫《公是集》有《扬州闻歌》诗：「淮南旧有《于遮》舞，隋俗今传《水调》声。」一曲传唱四五百年，其魅力可见矣。唐时《水调》有大曲、小曲之分。大曲《水调》歌，「凡十一叠，前五叠为歌，後六叠为入破。其歌，第五叠五言调，声韵怨切。故白乐天诗云：『五言一遍最殷勤，调少情多似有因。不会当时翻曲意，此声肠断为何人？』」（《乐府诗集·卷七十九·〈水调〉歌》）按，《乐府诗集》所载十一叠《水调》，第一至第四叠（遍）歌为七言，第五叠为五言；入破第一至第五为七言，第六辙又为五言。《水调》小曲，为单曲歌唱（参任半塘《唐声诗·下编卷十三》）。王龙标所听《水调子》即是小曲。时《水调》主以笛奏，唐大曲《水调》第二叠歌辞即说「笛倚新翻《水调歌》」，冯正中《采桑子》：「《水调》何人吹笛声？」「唐又有新《水调》，亦商调曲也。」（《乐府诗集·卷七十九·〈水调〉歌》）《碧鸡漫志·卷四·〈水调歌〉》引白乐天《看采菱》诗所言「时唱一声新《水调》，谩人道是《采菱歌》」，即指「《水调》中新腔」。唐代《水调》，又指音调名，即一部乐之总名（非一曲之专名）。《唐会要·卷三十三》所载「南昌商，时号『水调』」，即指音调而言。《碧鸡漫志·卷四·〈水调歌〉》：「《理道要诀》所载唐乐曲，南吕商时号『水调』。予数见唐人说『水调』，各有不同。予因疑『水调』非曲名，乃俗呼音调之异名，今决矣。……《外史梼杌》云：『王衍泛舟巡阆中，舟子皆衣锦绣，自制水调《银汉曲》。』此『水调』中制《银汉曲》也。」王衍所制《银汉曲》，属「水调」乐部中之曲，故《银汉曲》前冠以「水调」。毛稚黄《填词名解·卷三》据此亦说：「水调者，一部乐之名也；《水调歌》者，一曲之名也。」《水调歌头》则是截取大曲《水调》之首章另倚新声而成。《填词名解》：「歌头，又曲之始音，如《六州歌头》、《氐州第一》之类。《海录碎事》云：『炀帝开汴河，自造《水调》，其歌颇多，谓之『歌头』，首章之一解也。顾从敬《诗馀笺释》云：『明皇欲幸蜀时，犹听唱《水调》，至「唯有年年秋雁飞」，因潸然，叹峤真才子！不待曲终。』水调曲颇广，因歌止首解，故谓之『歌头』。或云南唐元宗留心内宠，击鞫无虚日。乐工杨花飞奏《水调》词，但唱『南朝天子爱风流』一句，如是数四，以为讽谏。後人广其意为词，以其第一句，故称『水调歌头』云。」《水调歌头》与唐人《水调》所属宫调不同：唐《水调》，属商调曲；宋《水调歌头》，则为中吕调（《碧鸡漫志·卷四·〈水调歌〉》）。故《词谱·卷二十三》：「凡大曲歌头，另倚新声也。」毛东堂词名《元会曲》，张芸窗词名《凯歌》，吴梦窗词《江南好》，贺方回词名《台城游》，汪相如词名《水调歌》，姜白石词名《花犯念奴》，明杨升菴词名《花犯》。双调，九十五字，前後阕各四平韵。亦有前後阕两六言句夹叶仄韵者，有平仄互叶几于句句用韵者。<br>「明月几时有，把酒问青天」句：傅子立注引「青天有月来几时，我今停杯一问之。」<br>「今夕是何年」句：傅子立注引唐·杜少陵《今夕行》诗：「今夕何夕岁云徂。」<br>乘风：傅子立注：「《列子》：『随风东西，犹木叶干壳。竟不知我乘风邪，风乘我耶？』」刘尚荣按：「语见《列子·卷二·黄帝》，原文作『风乘我邪，我乘风乎』，傅注引文有误倒。」<br>又恐：另据明吴讷钞本、《苏长公二妙集》、毛本作「惟恐」。<br>琼楼：傅子立注：「唐段成式云：『翟天师尝于江上望月，或曰：「此中竟何有？」翟笑曰：「可随吾指观。」忽见月规半天，琼楼金阙满焉。顷刻不复见。』」刘尚荣按：「通行本《酉阳杂俎·前集卷二·壶史》所载与此微异，原文如下：『翟天师名乾祐，峡中人。长六尺。手大尺馀，每揖人，手过胸前。卧常虚枕。晚年往往言将来事。常入夔州市，大言曰：『今夕当有八人过此，可善待之。』人不之悟。其夜火焚数百家，八人乃『火』字也。每入山，虎群随之。曾于江岸与弟子数十玩月，或曰：『此中竟何有？』翟笑曰：『可随吾指观。』弟子中两人见月规半天，琼楼金阙满焉。数息间，不复见。』」<br>不胜寒：傅子立注：「《明皇杂录》：『八月十五日夜，叶能静邀上游月宫。将行，请上衣裘而往。及至月宫，寒凛特异，上不能禁。能静出丹二粒进上，服之，乃止。』」刘尚荣按：「今通行本《明皇杂录》无此条。」<br>起舞：傅子立注唐·李太白《月下独酌》诗：：「我歌月徘徊，我舞影零乱。」<br>照无眠：傅注本原误作「照不眠」，据诸本改。<br>有恨：傅子立注：「唐诗：『月如无恨月长圆。』」刘尚荣按：「《全唐诗》中无此句。司马温公《温公续诗话》：『李长吉歌「天若有晴天亦老」，人以为奇绝无对。曼卿对「月如无恨月长圆」，人以为勍敌。』事别见《苕溪渔隐丛话·前集·卷五十三·的对》引《迂叟诗话》：『李长吉歌「天若有晴天亦老」，人以为奇艳无对。石曼卿对「月如无恨月长圆」，人以为勍敌。』石延年，字曼卿，北宋诗人。傅注似别有所据。」<br>阴晴圆缺：傅子立注：「公《中秋寄子由》诗云：『尝闻此宵月，万里阴晴圆。』」刘尚荣按：「《东坡集·卷九·中秋月三首》原句作：『万里同阴晴。』按此诗押『庚』韵，傅注引作『阴晴圆』者误也。又有东坡自注可證：『故人史生为余言：「尝见海贾云『中秋有月，则是岁珠多而圆。』贾人常以此候之，虽相去万里，他日会合，相问阴晴，无不同者。」』」<br>此事：傅注本原误作「此时」，据诸本改。<br>千里：傅子立注引南朝宋·谢希逸《月赋》：「美人邈兮音尘绝，隔千里兮共明月。」刘尚荣按：「《文选·卷三十二》『邈』作『迈』，『绝』作『阙』。又唐·许丁卯《送客》诗：『唯应洞庭月，万里共婵娟。』见《文苑英华·卷二百八十》。」\n3. **翻译**☆\n> 丙辰年的中秋节，高兴地喝酒直到第二天早晨，喝到大醉，写了这首词，同时思念弟弟子由。<br>明月从什么时候才开始出现的？我端起酒杯遥问苍天。不知道在天上的宫殿，今天晚上是何年何月。我想要乘御清风回到天上，又恐怕在美玉砌成的楼宇，受不住高耸九天的寒冷。翩翩起舞玩赏着月下清影，（月宫）哪裏比得上在人间？<br>月儿转过朱红色的楼阁，低低地挂在雕花的窗户上，照着没有睡意的自己。明月不该对人们有什么怨恨吧，为什么偏在人们离别时才圆呢？人有悲欢离合的变迁，月有阴晴圆缺的转换，这种事自古来难以周全。只希望这世上所有人的亲人能平安健康，即便相隔千里，也能共享这美好的月光。\n4. **背景与赏析**✐\n> 此词作于神宗熙宁九年（西元一〇七六年）。当时，东坡为避开汴京的政治风波而在密州做官，其唯一的亲人弟弟子由则远在齐州任掌书记。中秋之夜，处在政治上失意及与亲人离别之中的东坡，不免有感于怀，故作此词。\n这首词以月起兴，与弟子由七年未见之情为基础，围绕中秋明月展开想象和思考，把人世间的悲欢离合之情纳入对宇宙人生的哲理性追寻之中，反映了作者复杂而又矛盾的思想感情，又表现出作者热爱生活与积极向上的乐观精神。词作上阕反映执著人生，下阕表现善处人生。落笔潇洒，舒卷自如，情与景融，境与思偕，思想深刻而境界高逸，充满哲理，是东坡词的典范之作。此处所收版本取自影元本《东坡乐府》卷上。');
+    </script>
+</body>
+
+</html>

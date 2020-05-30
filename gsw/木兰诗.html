@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 木兰诗\n**作者** *南北朝•无名氏*\n1. **全文**⚐\n> 唧唧复唧唧，木兰当户织。不闻机杼声，惟闻女叹息。<br>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。<br>万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎；愿驰千里足，送儿还故乡。<br>爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳，当窗理云鬓，对镜贴花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。<br>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？\n2. **注解**▽\n> 唧（jī）唧：纺织机的声音。一说为叹息声，意思是木兰无心织布，停机叹息。首句一作「唧唧何力力」。<br>当（dāng）户：对着门或在门旁，泛指在家中。<br>机杼（zhù）声：织布机发出的声音。机，指织布机；杼，织布的梭子。<br>惟：只。<br>何：什么。<br>忆：思念，惦记<br>军帖（tiě）：徵兵的文书。<br>可汗（kèhán）：古代西北地区少数民族对君主的称呼。大点兵：大规模征兵。<br>军书十二卷：征兵的名册很多卷。十二，表示很多，不是确指。下文的「十年」、「十二转」、「十二年」，用法与此相同。<br>爷：和下文的「阿爷」一样，都指父亲。当时北方呼父为「阿爷」。<br>鞍马：马匹和乘马用具。《新唐书·兵志》载：起自西魏的府兵制规定从军的人要自备武器、粮食和衣服。<br>愿为市鞍（ān）马：为，为此（指代父从军）。市，买。<br>鞯（jiān）：马鞍下的垫子。<br>辔（pèi）头：驾驭牲口用的嚼子、笼头和缰绳。<br>辞：离开、辞行。<br>溅（jiān）溅：水流激射的声音。<br>旦：早晨。<br>但闻：只听见。<br>胡骑（jì）：胡人的战马。胡，古代对北方少数民族的称呼。<br>啾（jiū）啾：马叫的声音。<br>戎机：军机，指战争。<br>万里赴戎机：不远万里，奔赴战场。<br>关山度若飞：像飞一样地跨过一道道的关，越过一座座的山。度，越过。<br>金柝（tuò），即刁斗。古代军中用的一种铁锅，白天用来做饭，晚上用来报更。一说金为刁斗，柝为木柝。李善注：「金，谓刁斗也。衞宏《汉旧仪》曰：昼漏尽，夜漏起，城门击刁斗，周庐击木柝。」<br>朔（shuò）气传金柝：北方的寒气传送着打更的声音。朔，北方。<br>寒光照铁衣：冰冷的月光照在将士们的铠甲上。寒光，指清冷的月光，铁衣，古代战士穿的带有铁片的战衣。<br>天子：即前面所说的「可汗」。<br>明堂：皇帝用来祭祀、接见诸侯、选拔等所用的殿堂。<br>转（zhuǎn）：勋级每升一级叫一转，十二转为最高的勋级。<br>十二转：不是确数，形容功劳极高。<br>策勋十二转：记很大的功。策勋，记功。<br>赏赐百千强（qiáng）：赏赐很多的财物。百千，形容数量多；强，有馀。<br>问所欲：问（木兰）想要什么。<br>不用：不为、不做。<br>尚书郎：官名，魏晋以后在尚书台（省）下分设若干曹（部），主持各曹事务的官通称尚书郎。<br>千里足：可驰千里的脚力，指好马。一作「愿借明驼千里足」，均指愿得良骑速回故乡。<br>「爷娘闻女来，出郭相扶将。」句：谓父母互相搀扶着到城外来迎接木兰。郭，外城；扶，扶持；将，助词。<br>姊（zǐ）：姐姐。<br>理：梳理。<br>红妆（zhuāng）：指女子的艳丽装束。<br>霍（huò）霍：磨刀迅速时发出的声音。一说，刀光闪动疾速貌。<br>著（zhuó）：通假字通「着」，穿。<br>云鬓（bìn）：像云那样的鬓发，形容好看的头发。<br>帖（tiē）花黄：当时流行的一种化妆款饰，把金黄色的纸剪成星、月、花、鸟等形状贴在额上，或在额上涂一点黄的颜色。帖，同「贴」；花黄，古代妇女的一种面部装饰物。<br>火伴：古时兵制，十人为一火，火伴即同火的人。<br>「雄兔脚扑朔，雌兔眼迷离。」句：据说，提着兔子的耳朵悬在半空时，雄兔两只前脚时时动弹，雌兔两只眼睛时常眯着，所以容易辨认。扑朔，形容雄兔脚上的毛蓬松的样子；迷离，形容雌兔的眼睛被蓬松的毛遮蔽的样子。<br>「双兔傍（bàng）地走，安能辨我是雄雌？」句：当两只兔子一起在地上跑时便区别不出它们的雌雄。傍地走，指在地上跑。以上四句通过雄兔雌兔在跑动时不能区别的比喻，对木兰的才能和智慧加以赞扬和肯定，传达了一种「谁说女子不如男」的观念。\n3. **翻译**☆\n> 叹息声一声接着一声传出，木兰对着房门织布。听不见织布机织布的声音，只听见木兰在叹息。问木兰在想什么？问木兰在惦记什么？（木兰答道）我也没有在想什么，也没有在惦记什么。昨天晚上看见徵兵文书，知道君主在大规模征兵，那么多卷徵兵文册，每一卷上都有父亲的名字。父亲没有大儿子，木兰（我）没有兄长，木兰愿意为此到集市上去买马鞍和马匹，就开始替代父亲去征战。<br>在集市各处购买马具。第二天早晨离开父母，晚上宿营在黄河边，听不见父母呼唤女儿的声音，只能听到黄河水流水声。第二天早晨离开黄河上路，晚上到达黑山头，听不见父母呼唤女儿的声音，只能听到燕山胡兵战马的啾啾的鸣叫声。<br>不远万里奔赴战场，翻越重重山峰就像飞起来那样迅速。北方的寒气中传来打更声，月光映照着战士们的铠甲。将士们身经百战，有的为国捐躯，有的转战多年胜利归来。<br>胜利归来朝见天子，天子坐在殿堂（论功行赏）。给木兰记很大的功勋，得到的赏赐有千百金还有余。天子问木兰有什么要求，木兰说不愿做尚书郎，希望骑上千里马，回到故乡。<br>父母听说女儿回来了，互相搀扶着到城外迎接她；姐姐听说妹妹回来了，对着门户梳妆打扮起来；弟弟听说姐姐回来了，忙着霍霍地磨刀杀猪宰羊。每间房都打开了门进去看看，脱去打仗时穿的战袍，穿上以前女孩子的衣裳，当着窗子、对着镜子整理漂亮的头发，对着镜子在面部贴上装饰物。走出去看一起打仗的火伴，火伴们很吃惊，（都说我们）同行数年之久，竟然不知木兰是女孩。<br>（提着兔子耳朵悬在半空中时）雄兔两只前脚时时动弹、雌兔两只眼睛时常眯着，所以容易分辨。雄雌两兔一起并排跑，怎能分辨哪个是雄兔哪个是雌兔呢？\n4. **背景与赏析**✐\n> 《木兰诗》，又名《木兰辞》，约作于北魏，最初录于南朝陈朝释智匠《古今乐录》，长三百馀字，后经隋唐文人润色。一说《木兰诗》是唐人韦元甫所作，《文苑英华·卷三三三》载《木兰歌》，并题作者为唐人韦元甫。宋朝郭茂倩《乐府诗集》载：「唐人韦元甫拟作木兰诗一篇。」并归入《横吹曲辞·梁鼓角横吹曲》中。严羽《沧浪诗话》认为「朔气传金柝，寒光照铁衣」之类，「已似太白，必非汉魏人诗」。\n这是一首长篇叙事诗，讲述讲述了一个叫木兰的女孩，女扮男装，替父从军，在战场上建立功勋，回朝后不愿作官，只求回家团聚的故事，热情赞扬了这位女子勇敢善良的品质、保家卫国的热情和英勇无畏的精神。全诗以「木兰是女郎」来构思木兰的传奇故事，富有浪漫色彩；详略安排极具匠心，富有生活气息；以铺陈、排比、对偶、互文等手法描述人物情态，刻画人物心理，生动细致，使作品具有强烈的艺术感染力。');
+    </script>
+</body>
+
+</html>

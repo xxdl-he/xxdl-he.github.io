@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 桃花源记\n**作者** *晋•陶渊明*\n1. **全文**⚐\n> 晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷。渔人甚异之。复前行，欲穷其林。<br>林尽水源，便得一山。山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然。有良田、美池、桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。<br>见渔人，乃大惊。问所从来，具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”<br>既出，得其船，便扶向路，处处志之。及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。<br>南阳刘子骥，高尚士也。闻之，欣然规往。未果，寻病终。后遂无问津者。\n2. **注解**▽\n> 太元：东晋孝武帝的年号（公元376年-公元397年）。<br>武陵：郡名，今武陵山区或湖南常德一带。<br>为业：把……作为职业，以……为生。为，作为。<br>缘：顺着、沿着。<br>行：行走这里指划船。<br>远近：偏义复词，仅指远。<br>忽逢：忽然遇到。逢，遇见。<br>夹岸：两岸。<br>杂：别的，其他的。<br>鲜美：鲜艳美丽。<br>落英：落花。一说，初开的花。<br>缤纷：繁多而纷乱的样子。<br>异之：以之为异，即对此感到诧异。异，意动用法，形作动，以……为异，对……感到诧异，认为……是奇异的。之，代词，指见到的景象。<br>复：又、再。<br>前：名词活用为状语，向前。<br>欲：想要。<br>穷：尽，形容词用做动词，这里是“走到……的尽头”的意思。<br>林尽水源：林尽于水源，桃花林在溪水发源的地方就没有了。尽，完、没有了。<br>便：于是、就。<br>得：看到。<br>仿佛：隐隐约约，形容看得不真切的样子。<br>若：好像。<br>舍：舍弃，丢弃，<br>初：起初，刚开始。<br>才通人：仅容一人通过。才，副词，只。<br>行：行走。<br>豁然开朗：形容由狭窄幽暗突然变得宽阔明亮的样子。然，……的样子。豁然，形容开阔敞亮的样子；开朗，开阔明亮。<br>平：平坦。<br>旷：空阔；宽阔。<br>屋舍：房屋。<br>俨（yǎn）然：整齐的样子。<br>之：这。<br>属：类。<br>阡陌：田间小路。南北走向的叫阡，东西走向的叫陌。<br>交通：交错相通。<br>阡陌交通：田间小路交错相通。<br>鸡犬相闻：（村落间）能相互听见鸡鸣狗叫的声音。相闻，可以互相听到。<br>种作：耕种劳作。<br>衣着：穿着打扮，穿戴。<br>悉：全、都。<br>外人：桃花源以外的世人，下同。<br>黄发：旧说是长寿的象征，用以指老人。<br>垂髫（tiáo）：垂下来的头髮，用来指小孩子。髫，小孩垂下的短髮。<br>黄发垂髫：老人和小孩。<br>并：都。<br>怡然：愉快、高兴的样子。<br>乃大惊：就很惊讶。乃，于是、就；大，很，非常。<br>从来：从……地方来。<br>具：通“俱”，全，详细。<br>之：代词，指代桃源人所问问题。<br>要：通“邀”，邀请。<br>咸：副词，都、全。<br>问讯：询问消息、打听消息。<br>云：说。<br>先世：祖先。<br>率：率领。<br>妻子：指妻室子女，“妻”“子”是两个词。妻，指男子配偶；子，指子女。<br>邑人：同乡（县）的人。邑，古代区域单位。《周礼·地官·小司徒》：“九夫为井，四井为邑。”<br>绝境：与人世隔绝的地方。绝，绝处。<br>复：再、又。<br>焉：兼词，相当于“于之”，“于此”，从这里。<br>遂：就。<br>间隔：隔断，隔绝。<br>世：朝代。<br>乃：竟、竟然。<br>无论：不要说，（更）不必说。“无”“论”是两个词，不同于现代汉语里的“无论”。<br>为：对、向。<br>具言：详细地说出。<br>所闻：指渔人所知道的世事。闻，知道、听说。<br>叹惋：感叹、惋惜。惋，惊讶、惊奇。<br>余：其余，剩余。<br>延至：邀请到。延，邀请；至，到。<br>去：离开。<br>语：告诉。<br>不足：不必、不值得。<br>为：介词，向、对。<br>既：已经。<br>便扶向路：就顺着旧的路（回去）。扶，沿着、顺着；向，从前的、旧的。<br>处处志之：处处都做了标记。志，做标记；处处，到处。<br>及郡下：到了郡城。及，到达；郡，太守所在地，指武陵郡。<br>诣（yì）：到。特指到尊长那里去。<br>如此：像这样，指在桃花源的见闻。<br>寻向所志：寻找以前所做的标记。寻，寻找；向，先前；志，标记。<br>遂：终于。<br>得：取得、获得，文中是找到的意思。<br>高尚：品德高尚。<br>士：人士。<br>也：表判断。<br>欣然：高兴的样子。<br>规：计划。<br>未果：没有实现。果，实现。<br>寻：随即、不久。<br>终：死亡。<br>问津：问路，这里是访求、探求的意思。津，渡口。\n3. **翻译**☆\n> 东晋太元年间，武陵郡有个人以打渔为生。一天，他顺着溪水行船，忘记了路程的远近。忽然遇到一片桃花林，生长在溪水的两岸，长达几百步，中间没有别的树，花草鲜嫩美丽，落花纷纷的散在地上。渔人对此（眼前的景色）感到十分诧异，继续往前行船，想走到林子的尽头。<br>桃林的尽头就是溪水的发源地，于是便出现一座山，山上有个小洞口，洞里仿佛有点光亮。于是他下了船，从洞口进去了。起初洞口很狭窄，仅容一人通过。又走了几十步，突然变得开阔明亮了。（呈现在他眼前的是）一片平坦宽广的土地，一排排整齐的房舍。还有肥沃的田地、美丽的池沼，桑树竹林之类的。田间小路交错相通，鸡鸣狗叫到处可以听到。人们在田野里来来往往耕种劳作，男女的穿戴跟桃花源以外的世人完全一样。老人和小孩们个个都安适愉快，自得其乐。<br>村里的人看到渔人，感到非常惊讶，问他是从哪儿来的。渔人详细地做了回答。村里有人就邀请他到自己家里去（做客）。设酒杀鸡做饭来款待他。村里的人听说来了这么一个人，就都来打听消息。他们自己说他们的祖先为了躲避秦时的战乱，领着妻子儿女和乡邻来到这个与人世隔绝的地方，不再出去，因而跟外面的人断绝了来往。他们问渔人现在是什么朝代，他们竟然不知道有过汉朝，更不必说魏晋两朝了。渔人把自己知道的事一一详尽地告诉了他们，听完以后，他们都感叹惋惜。其余的人各自又把渔人请到自己家中，都拿出酒饭来款待他。渔人停留了几天，向村里人告辞离开。村里的人对他说：“我们这个地方不值得对外面的人说啊！”<br>渔人出来以后，找到了他的船，就顺着旧路回去，处处都做了标记。到了郡城，到太守那里去，报告了这番经历。太守立即派人跟着他去，寻找以前所做的标记，终于迷失了方向，再也找不到通往桃花源的路了。<br>南阳人刘子骥是个志向高洁的隐士，听到这件事后，高兴地计划前往。但没有实现，不久因病去世了。此后就再也没有问桃花源路的人了。\n4. **背景与赏析**✐\n> 本文选自《陶渊明集》，是陶渊明的代表作之一，也是《桃花源诗》的序言。借武陵渔人行踪这一线索，把现实和理想境界联系起来，通过对桃花源的安宁和乐、自由平等生活的描绘，表现了作者追求美好生活的理想和对现实社会的不满。');
+    </script>
+</body>
+
+</html>

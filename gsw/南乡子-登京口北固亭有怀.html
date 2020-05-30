@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 南乡子 · 登京口北固亭有怀\n**作者** *宋•辛弃疾*\n1. **全文**⚐\n> 何处望神州？满眼风光北固楼。千古兴亡多少事？悠悠，不尽长江滚滚流。<br>年少万兜鍪，坐断东南战未休。天下英雄谁敌手？曹刘。生子当如孙仲谋。\n2. **注解**▽\n> 南乡子：唐教坊曲名，后用作词牌。又名《好离乡》、《蕉叶怨》。《金奁集》入「黄钟宫」。原为单调，有二十七字、二十八字、三十字各体，两平韵，三仄韵，平仄换韵。单调始自后蜀欧阳炯，此词牌即以欧阳炯《南乡子》为正体。冯正中、李珣（Xún）俱本此添字。双调者始自南唐冯正中词。冯词平韵五十六字，十句，上下阕各四句用韵。另有五十八字体者。其定格为双调五十六字，上下阕各四平韵，一韵到底。此调唱时音节需流丽谐婉，声情掩抑。<br>京口：即今江苏镇江。唐·李弘宪《元和郡县志·卷二十六·〈江南道·润州〉》：「今为浙西观察使理所。……本春秋吴之朱方邑，始皇改为丹徒。汉初为荆国，刘贾所封。后汉献帝建安十四年，孙权自吴理丹徒，号曰『京城』，今州是也。十六年迁都建业，以此为京口镇。」<br>北固亭：清·顾宛溪《读史方舆纪要·卷二十五·镇江府》：「北固山在城北一里府治后，下临长江。自晋以来，郡治皆据其上。三面临水，回岭斗绝，势最险固，因名，盖郡之主山也。蔡谟起楼于其上，以贮君实，谢安复营葺之。……大同十年，武帝登望，久之曰：『此岭下足须固守，然于京口，实乃壮观。』于是改楼曰北顾楼。」《北固山志·卷二·建置》：「北固山在山上，晋蔡谟建。《梁纪》云：『大同十年春三月乙酉幸京口城北固楼，改名北顾。』乾道己丑守臣待制陈天麟补建，有碑记（嘉定甲戌，待制史弥坚命吏访得，裂为三而失其一）。楼或亭名。旧亭在郡圃后，绍熙壬子殿撰赵彦逾徙于山，西向。嘉泰壬戌阁学黄由增广之。」陈天麟《北固山志·卷十二·〈艺文·重修北固楼记〉》：「予观京口诸山起伏缭绕，出于城府，率如瓜蔓斿缀。今甘露最近江，迄立西乡，而山南北皆（下阙）田，盖昔江道也，与《南史》所云合矣。予于连沧观之西为亭，面之，而复其旧名，则甘露之为北固，其亦安之而不辞矣。夫六朝之所以名山，盖自固耳。其君臣厌厌若九泉下人，宁复有远略？玆地控吴负楚，襟山带江，登高北望，使人有焚龙庭，空漠北之志。神州陆沉殆五十年，岂无忠义之士奋然自拔，为朝廷快宿愤，报不共戴天之雠，而乃甘心恃江为固乎？则予是亭之复，不特为登览也。」按：《北固山志·卷七杂识》：「陈天麟，右朝散郎，敷文阁，乾道四年任。」<br>「不尽长江滚滚流」句：唐·杜少陵《登高》诗：「无边落木萧萧下，不尽长江滚滚来。」宋·苏东坡《次韵前篇》诗：「长江滚滚空自流。」<br>坐断：即「佔据住」之意。<br>「天下英雄谁敌手？曹刘」句：《三国志·卷三十二·〈蜀书·先主传〉》：「是时曹公从容谓先主曰：『今天下英雄，唯使君与操耳。本初之徒，不足数也。』」<br>「生子当如孙仲谋」句：东晋、南朝宋·裴世期注《三国志·卷四十七·〈吴书·吴主传〉》引《吴历》：「曹公出濡须，作油船，夜渡洲上。权以水军围取，得三千馀人，其没溺者亦数千人。权数挑战，公坚守不出。权乃自来，乘轻船，从灞须口入公军。诸将皆以为是挑战者，欲击之。公曰：『此必孙权欲身见吾军部伍也。』敕军中皆精严，弓弩不得妄发。权行五六里，回还作鼓吹。公见舟船器仗军伍整肃，喟然叹曰：『生子当如孙仲谋，刘景升儿子若豚犬耳！』权为笺与曹公，说：『春水方生，公宜速去。』别纸言：『足下不死，孤不得安。』曹公语诸将曰：『孙权不欺孤。』乃彻军还。」\n3. **翻译**☆\n> 什么地方可以看见中原呢？在北固楼上，满眼都是美好的风光。从古到今，有多少国家兴亡大事呢？不知道。往事连绵不断，如同没有尽头的长江水滚滚地奔流不息。<br>当年孙权在青年时代，做了三军统帅。他能占据东南，坚持抗战，没有向敌人低头和屈服过。天下英雄谁是孙权的敌手呢？衹有曹操和刘备而已。这样也就难怪曹操说：「要是能有个孙权那样的儿子就好了。」\n4. **背景与赏析**✐\n> 此词通过对古代英雄人物的歌颂，表达了作者渴望像古代英雄人物那样金戈铁马，收拾旧山河，为国效力的壮烈情怀，饱含着浓浓的爱国思想，但也流露出作者报国无门的无限感慨，蕴含着对苟且偷安、毫无振作的南宋朝廷的愤懑之情。全词写景、抒情、议论密切结合；融化古人语言入词，活用典故成语；通篇三问三答，层次分明，互相呼应；即景抒情，藉古讽今；风格明快，气魄阔大，情调乐观昂扬。\n收回遥望的视线，看这北固楼近处的风物：「千古江山，英雄无觅，孙仲谋处。舞榭歌台，风流总被，雨打风吹去。」（《永遇乐·京口北固亭怀古》）这不禁引起了词人千古兴亡之感。因此，词人接下来再问一句：「千古兴亡多少事？」这句问语纵观千古成败，意味深长，回味无穷。然而，往事悠悠，英雄往矣，衹有这无尽的江水依旧滚滚东流。「悠悠，不尽长江滚滚流！」「悠悠」者，兼指时间之漫长久远，和词人思绪之无穷也。\n「不尽长江滚滚流」，藉用杜少陵《登高》诗句：「无边落木萧萧下，不尽长江滚滚来。」词人胸中倒来倒去的不尽愁思和感慨，犹如长流不息的江水。「年少万兜鍪，坐断东南战未休。」三国时代的孙权年纪轻轻就统率千军万马，雄据东南一隅，奋发自强，战斗不息。据历史记载：孙权十九岁继父兄之业统治江东，西征黄祖，北拒曹操，独据一方。赤壁之战大破曹兵，年方二十七岁。因此可以说，上面这两句是实写史事，因为它是千真万确的历史，因而更具有说服力和感染力。作者在这里一是突出了孙权的年少有为，「年少」而敢于与雄才大略、兵多将广的强敌曹操较量，这就需要非凡的胆识和气魄。二是突出了孙权的盖世武功，他不断征战，不断壮大。而他之「坐断东南」，形势与南宋政权相似。显然，稼轩热情歌颂孙权的不畏强敌，坚决抵抗，并战而胜之，正是反衬当朝文武之辈的庸碌无能、懦怯苟安。\n接下来，辛稼轩为了把这层意思进一步发挥，不惜以夸张之笔极力渲染孙权不可一世的英姿。他异乎寻常地第三次发问，以提醒人们注意：「天下英雄谁敌手？」作者自问又自答曰：「曹刘」，唯曹操与刘备耳！据《三国志·蜀书·先主传》记载：曹操曾对刘备说：「今天下英雄，惟使君（刘备）与操耳。」辛稼轩便藉用这段故事，把曹操和刘备请来给孙权当配角，说天下英雄衹有曹操、刘备才堪与孙权争胜。曹、刘、孙三人，论智勇才略，孙权未必在曹刘之上。稼轩在《美芹十论》中对孙权的评价也并非称赞有加，然而，在这首词里，词人却把孙权作为三国时代第一流叱咤风云的英雄来颂扬，其所以如此用笔，实藉凭吊千古英雄之名，慨叹当今南宋无大智大勇之人执掌乾坤。这种用心，更于篇末见意。作者在这里极力赞颂孙权的年少有为，突出他的盖世武功，其原因是孙权「坐断东南」，形势与南宋极似，作者这样热情赞颂孙权的不畏强敌，其实是对苟且偷安、毫无振作的南宋朝廷的鞭挞。\n《三国志·吴书·吴主传》注引《吴历》说：曹操有一次与孙权对垒，见吴军乘着战船，军容整肃，孙权仪表堂堂，威风凛凛，乃喟然叹曰：「生子当如孙仲谋，刘景升（刘表）儿子若豚犬耳！」一世之雄如曹操，对敢于与自己抗衡的强者，投以敬佩的目光，而对于那种不战而请降的懦夫，如对刘景升儿子刘琮则十分轻视，斥为任人宰割的猪狗。把大好江山拱手奉献敌人，还要为敌人耻笑辱骂。作者在这里引用了前半句，没有明言后半句，实际上是藉曹操之口，讽刺当朝主议的大臣们都是刘景升儿子一类的猪狗，这种别开生面的表现手法，曲尽其妙，而又意在言外。\n曹操所一褒一贬的两种人，形成了极其鲜明、强烈的对照，在南宋摇摇欲坠的政局中，也有着主战与主和两种人。聪明的词人衹做正面文章，对刘景升儿子这个反面角色，便不指名道姓以示众了。然而纵然作者不予道破，而又能使人感到不言而喻。因为上述曹操这段话众所周知，虽然辛稼轩衹说了前一句赞语，人们马上就会联想起后面那句骂人的话，从而使人意识到辛稼轩的潜台词：可笑当朝主和议的众多王公大臣，都是刘景升儿子之类的猪狗。词人此种别开生面的表现手法，颇类似歇后语的作用。而且在写法上这一句与上两句意脉不断，衔接得很自然。上两句说，天下英雄中衹有曹操、刘备配称孙权的对手。连曹操都这样说，生儿子要像孙权这个样。再从「生子当如孙仲谋」这句话的蕴含和思想深度来说，南宋时代人，如此看重孙权，实是那个时代特有的社会心理的反映。因为南宋朝廷实在太萎靡庸碌了，在历史上，孙权能称雄江东于一时，而南宋经过了好几代皇帝，却没有出一个像孙权一样的人。所以，「生子当如孙仲谋」这句话，本是曹操的语言，而由辛稼轩口中说出，却是代表了南宋人民要求奋发图强的时代的呼声。\n这首词通篇三问三答，互相呼应，感怆雄壮，意境高远。它与稼轩同时期所作另一首登北固亭词《永遇乐·京口北固亭怀古》相比，一风格明快，一沉郁顿挫，同是怀古伤今，写法大异其趣，而都不失为千古绝唱，亦可见辛稼轩丰富多彩之大手笔也。');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Markdown 浏览</title>
+    <style>/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title:  Antique
+Author:  Brett Terpstra
+Description:  An "antiqued" theme with off-white background and serif typography
+*/
+#wrapper {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 0.8764em;
+  line-height: 1.5em;
+  margin: 0;
+  font-size: 14px; }
+  #wrapper p {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.6125em; }
+  #wrapper ul {
+    list-style: square; }
+  #wrapper ol {
+    list-style: decimal; }
+  #wrapper ul, #wrapper ol {
+    padding-left: 0;
+    list-style-position: outside; }
+    #wrapper ul li, #wrapper ol li {
+      font-size: 110%;
+      line-height: 1.525em; }
+      #wrapper ul li li, #wrapper ol li li {
+        font-size: 100%; }
+      #wrapper ul li p, #wrapper ol li p {
+        font-size: 100%;
+        margin-left: 1em; }
+    #wrapper ul ul, #wrapper ul ol, #wrapper ol ul, #wrapper ol ol {
+      margin-bottom: .4em;
+      padding-left: 30px; }
+    #wrapper ul ul, #wrapper ol ul {
+      list-style: circle; }
+  #wrapper strong {
+    font-weight: bold; }
+  #wrapper em {
+    font-style: italic; }
+  #wrapper h1 {
+    margin: 0.6563em 0;
+    font-size: 2.8em;
+    line-height: 1.6563em; }
+  #wrapper h2 {
+    margin: 0.875em 0;
+    font-size: 1.7143em;
+    line-height: 0.875em; }
+  #wrapper h3 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    line-height: 1em; }
+  #wrapper h4 {
+    margin: 1.1667em 0;
+    font-size: 1.2857em;
+    line-height: 1.1667em; }
+  #wrapper h5 {
+    margin: 1.3125em 0;
+    font-size: 1.1429em;
+    line-height: 1.3125em; }
+  #wrapper h6 {
+    margin: 1.5em 0;
+    font-size: 1em;
+    line-height: 1.5em; }
+  #wrapper h1, #wrapper h2, #wrapper h3, #wrapper h4, #wrapper h5, #wrapper h6 {
+    font-weight: bold; }
+    #wrapper h1 a, #wrapper h2 a, #wrapper h3 a, #wrapper h4 a, #wrapper h5 a, #wrapper h6 a {
+      color: #514d3f;
+      border-bottom: dotted 1px #a7a099; }
+      #wrapper h1 a:hover, #wrapper h2 a:hover, #wrapper h3 a:hover, #wrapper h4 a:hover, #wrapper h5 a:hover, #wrapper h6 a:hover {
+        color: #13120f; }
+  #wrapper h1, #wrapper h2 {
+    padding-bottom: .4em;
+    padding-top: .25em;
+    font-family: "Hoefler Text", Georgia, serif;
+    line-height: 1.5em;
+    color: #514d3f;
+    text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h1 {
+    text-align: center; }
+    #wrapper h1:before {
+      content: "\0360";
+      position: relative;
+      left: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+    #wrapper h1:after {
+      content: "\0360";
+      position: relative;
+      right: -30px;
+      top: .4em;
+      color: #837e70;
+      text-shadow: 1px 0px 0px #a7a099, 0 1px 0 white; }
+  #wrapper h2 {
+    box-shadow: 0 -1px 0 white, 0 -2px 0 #837e70;
+    margin-top: 1em;
+    padding-bottom: 0; }
+  #wrapper, #wrapper p, #wrapper td, #wrapper div {
+    color: #45462f;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased; }
+  #wrapper a {
+    color: #00857a;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+    #wrapper a:hover {
+      color: #35b8ad; }
+  #wrapper strong {
+    font-weight: 600;
+    color: #605b4b; }
+  #wrapper .footnote {
+    font-size: .8em;
+    vertical-align: super;
+    color: #0d6ea1; }
+  #wrapper img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(56, 40, 18, 0.25); }
+  #wrapper dt {
+    font-weight: bold; }
+  #wrapper dd {
+    margin-bottom: 1em;
+    text-indent: 1em; }
+  #wrapper blockquote {
+    margin: 14px 40px; }
+  #wrapper code {
+    font-family: courier, monospace;
+    background: #f2ede8;
+    border: solid 1px #a7a099;
+    font-size: .95em; }
+  #wrapper pre {
+    background: #f2ede8;
+    padding: 4px; }
+  #wrapper pre code {
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+    border: none;
+    background: none; }
+  #wrapper hr {
+    border-color: #f2ede8;
+    height: 0;
+    background-color: #a7a099; }
+
+@media print {
+  body {
+    overflow: auto;
+    background: #fff;
+    color: #000 !important; }
+
+  img, pre, blockquote, table, figure {
+    page-break-inside: avoid; }
+
+  #wrapper {
+    background: #fff;
+    position: relative;
+    color: #000;
+    text-indent: 0px;
+    padding: 1in;
+    font-size: 85%; } }
+@media screen {
+  body {
+    height: 100%;
+    background: #f0edeb; }
+
+  #wrapper {
+    color: #514d3f;
+    overflow: auto;
+    text-indent: 0px;
+    padding: 25px; }
+    #wrapper ::selection {
+      background: rgba(157, 193, 200, 0.5); }
+    #wrapper h1::selection, #wrapper h2::selection, #wrapper h3::selection, #wrapper h4::selection, #wrapper h5::selection, #wrapper h6::selection {
+      background-color: rgba(133, 201, 232, 0.3); }
+    #wrapper code::selection {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee; }
+    #wrapper code span::selection {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: #eee !important; }
+    #wrapper a::selection {
+      background-color: rgba(255, 230, 102, 0.2); }
+    #wrapper td::selection, #wrapper th::selection, #wrapper caption::selection {
+      background-color: rgba(180, 237, 95, 0.5); }
+
+  .inverted {
+    background: #39362f; }
+    .inverted #wrapper {
+      background: #39362f; }
+      .inverted #wrapper a::selection {
+        background-color: rgba(255, 230, 102, 0.6); }
+      .inverted #wrapper p, .inverted #wrapper td, .inverted #wrapper li, .inverted #wrapper h1, .inverted #wrapper h2, .inverted #wrapper h3, .inverted #wrapper h4, .inverted #wrapper h5, .inverted #wrapper h6, .inverted #wrapper pre, .inverted #wrapper code, .inverted #wrapper th, .inverted #wrapper hr, .inverted #wrapper strong, .inverted #wrapper em, .inverted #wrapper .math, .inverted #wrapper dd, .inverted #wrapper dt {
+        color: #f0ede3;
+        border-color: #423d2f;
+        background: #39362f; }
+      .inverted #wrapper hr {
+        border-color: rgba(52, 52, 52, 0.3); }
+      .inverted #wrapper a {
+        color: #fff;
+        text-decoration: underline;
+        border-bottom: none; }
+      .inverted #wrapper .popup li, .inverted #wrapper .popup ul, .inverted #wrapper .popup strong {
+        background: none; } }
+#wrapper li > p:first-child {
+  margin: 0; }
+#wrapper li p {
+  margin: .5em 0; }
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0; }
+#wrapper caption {
+  display: table-caption;
+  font-weight: bold; }
+#wrapper col {
+  display: table-column; }
+#wrapper colgroup {
+  display: table-column-group; }
+#wrapper tbody {
+  display: table-row-group; }
+#wrapper tfoot {
+  display: table-footer-group; }
+#wrapper thead {
+  display: table-header-group; }
+#wrapper td, #wrapper th {
+  display: table-cell; }
+#wrapper th {
+  font-weight: bold; }
+#wrapper tr {
+  display: table-row; }
+#wrapper table {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  margin-top: -1px;
+  margin-bottom: 23px;
+  border: 1px solid rgba(124, 119, 112, 0.5); }
+  #wrapper table th, #wrapper table td {
+    padding: 0 1em;
+    font-size: 1.1em;
+    line-height: 23px; }
+  #wrapper table tbody {
+    background-color: rgba(124, 119, 112, 0.05); }
+  #wrapper table thead, #wrapper table tfoot {
+    background-color: rgba(124, 119, 112, 0.15); }
+  #wrapper table tr:nth-child(odd) {
+    background-color: rgba(227, 217, 205, 0.06); }
+  #wrapper table tr:nth-child(even),
+  #wrapper table td:nth-child(even) {
+    background-color: rgba(124, 119, 112, 0.06); }
+  #wrapper table thead,
+  #wrapper table tfoot {
+    border: 1px solid rgba(124, 119, 112, 0.5);
+    border-bottom: 1px solid rgba(124, 119, 112, 0.2); }
+  #wrapper table thead tr th:last-child {
+    border-right: 1px solid rgba(124, 119, 112, 0.5); }
+#wrapper figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em; }
+  #wrapper figure:hover {
+    cursor: pointer; }
+#wrapper figcaption {
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: #a7a099; }
+#wrapper .poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em; }
+  #wrapper .poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+    word-break: break-all;
+    word-break: break-word;
+    /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap; }
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative; }
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px; }</style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        document.getElementById('wrapper').innerHTML = marked('## 前出师表\n**作者** *三国•诸葛亮*\n1. **全文**⚐\n> 臣亮言：先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>宫中府中，俱为一体，陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理，不宜偏私，使内外异法也。<br>侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下。愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。<br>将军向宠，性行淑均，晓畅军事，试用之于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。<br>亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。<br>臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。<br>先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明，故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝，而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。<br>愿陛下托臣以讨贼兴复之效；不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎。陛下亦宜自谋，以咨诹善道，察纳雅言。深追先帝遗诏，臣不胜受恩感激。<br>今当远离，临表涕零，不知所言。\n2. **注解**▽\n> 先帝：指蜀昭烈帝刘备。先，尊称死去的人。<br>创：开创、创立。<br>业：统一天下的大业。<br>中道：中途。<br>崩殂（cú）：死。崩，古时指皇帝死亡；殂，死亡。<br>今：现在。<br>三分：天下分为孙权，曹操，刘备三大势力。<br>益州：汉代行政区域十三刺史部之一，包括今四川省和陕西省一带。这里指蜀汉。<br>疲弊：人力缺乏，物力缺无，民生凋敝。<br>益州疲弊：指蜀汉的处境艰难；<br>「此诚危急存亡之秋也」句：指关键时期，一般多指不好的。此，这；诚，的确、实在；之，的；秋，时，时候。<br>然：然而。<br>侍：侍奉。<br>卫：护卫。<br>懈：松懈、懈怠。<br>于：在。<br>内：皇宫中。<br>忘身：舍身忘死、奋不顾身。<br>盖：原来。<br>追：追念。<br>殊遇：优待、厚遇。<br>诚：的确、确实。<br>宜：应该。<br>开张圣听：扩大圣明的听闻，意思是要后主广泛地听取别人的意见。开张，扩大。<br>光：发扬光大，用作动词。<br>遗德：留下的美德。<br>恢弘：发扬扩大，用作动词。恢，大；弘，大、宽。<br>气：志气。<br>妄自菲薄：过于看轻自己。妄，过分；菲薄，小看、轻视。<br>引喻失义：讲话不恰当。引喻，称引、譬喻；喻，比如；义，适宜、恰当。<br>以：以致（与以伤先帝之明的以用法相同：以致）；<br>塞：阻塞。<br>谏：劝谏。<br>宫：指皇宫。<br>府：指丞相府。<br>俱：通「具」，全、都。<br>陟（zhì）：提升、奖励。<br>罚：惩罚。<br>臧否（pǐ）：善恶，这里用作动词，意思是评论人物好坏。<br>作奸犯科：做奸邪事情，触犯科条法令。作奸，做了奸邪的事情；科，科条、法令。<br>及：以及。<br>为：做。<br>有司：职有专司，就是专门管理某种事情的官吏。<br>刑：罚。<br>昭：显示、表明。<br>平：公平。<br>明：严明。<br>理：治理。<br>偏私：偏袒、有私心。<br>内外异法：内宫和外府刑赏之法不同。内外，指内宫和外府；异法，刑赏之法不同。<br>志：志向。<br>虑：思想、心思。<br>忠纯：忠诚纯正。<br>简：选择；一说通「拣」，挑选。<br>拔：选拔。<br>遗（wèi）：给予。<br>悉以咨之：都拿来跟他们商量。悉，全部；咨，询问、商议、征求意见；之，指郭攸之等人。<br>必能裨（bì）补阙漏：一定能够弥补缺点和疏漏之处。裨，补；阙，通「缺」，缺点、疏漏。<br>有所广益：有所启发和帮助；广益，增益；益，好处。<br>性行（xíng）淑均：性情善良品德端正；淑，善；均，平。<br>晓畅：精通。<br>试用：任用。<br>督：武职，向宠曾为中部督（禁卫军统帅）。<br>营：军营、军队。<br>行（háng）阵：指部队。<br>优劣得所：好的差的各得其所。<br>小人：晚辈，下人，这里指宦官。<br>倾颓：倾覆衰败。<br>痛恨：痛惜、遗憾<br>死节：为国而死的气节，能够以死报国。<br>隆：兴盛。<br>计日：计算着天数，指时日不远。<br>布衣：平民、百姓。<br>躬：亲自。<br>耕：耕种。<br>南阳：当时南阳郡，今河南南阳和湖北襄阳城西一带。<br>苟：苟且。<br>全：保全。<br>闻达：显达扬名、扬名显贵。<br>卑鄙：地位、身份低微，见识短浅。卑，身份低微；鄙，地处偏远。与今义不同。<br>猥（wěi）：辱，这里有降低身份的意思。<br>枉屈：枉驾屈就。<br>顾：探望。<br>感激：有所感而情绪激动。<br>许：答应。<br>驱驰：奔走效劳。<br>有：通「又」，跟在数词后面表示约数。<br>临崩寄臣以大事：刘备在临死的时候，把国家大事托付给诸葛亮，并且对刘禅说：「汝与丞相从事，事之如父。」；临：将要、临近。<br>夙夜忧叹：早晚忧虑叹息。<br>泸：水名，即如今的金沙江。<br>不毛：不长草木，这里指人烟稀少的地方。毛，庄稼、苗。<br>兵：武器。<br>甲：装备。<br>奖率：奖赏率领。<br>庶：希望。竭：竭尽。<br>驽（nú）钝：比喻才能平庸，这是诸葛亮自谦的话。驽，劣马，走不快的马，指才能低劣。钝，刀刃不锋利。<br>攘（rǎng）除：排除、铲除。<br>奸凶：奸邪凶恶之人，此指曹魏政权。<br>还：回。<br>于：到。<br>旧都：指东汉都城洛阳。<br>此臣所以报先帝而忠陛下之职分也：这是我用来报答先帝，效忠陛下的职责本分。所以，用来……的是<br>斟酌损益：斟情酌理、有所兴办。比喻做事要掌握分寸。（处理事务）斟酌情理，有所兴革。损，除去；益，兴办、增加。<br>托臣以讨贼兴复之效：把讨伐曹魏复兴汉室的任务交付给我。托，托付、交付；效，效命的任务。<br>不效则治臣之罪：没有成效就治我的罪。<br>告：告慰、告祭。<br>兴德之言：发扬陛下恩德的忠言。<br>慢：怠慢、疏忽，指不尽职。<br>彰其咎：揭示他们的过失。彰，表明、显扬；咎，过失，罪。<br>咨诹（zōu）善道：询问（治国的）良策。诹，询问、咨询。<br>察纳：识别采纳。察，明察；雅言，正确的言论、合理的意见。<br>深追：深刻追念。<br>先帝遗诏：刘备给后主的遗诏，见《三国志·蜀志·先主传》注引《诸葛亮集》，诏中说：「勿以恶小而为之，勿以善小而不为。惟贤惟德，能服于人。」遗诏，皇帝在临终时所发的诏令。<br>当：在……时候。<br>临：面对。<br>涕零：一作「涕泣」，眼泪。<br>零：落下。<br>不知所言：不知道再该说些什么。\n3. **翻译**☆\n> 先帝创业还没有完成一半，就中途去世了。如今天下分为三国，我们蜀汉国立困弊，这真是危急存亡的时刻啊。然而侍卫臣僚在内勤劳不懈，忠心的将士在外舍身忘死，这是因为他们追念先帝的特殊恩遇。想在您的身上进行报答。您应该广泛听取臣下的意见，以发扬光大先帝遗留下的美德。激发志士的勇气，不应当妄自菲薄。援引不恰当的譬喻，以堵塞忠言进谏的道路。<br>宫禁中的侍卫、各府署的臣僚都是一个整体，赏罚褒贬，不应有所不同。如有作恶违法的人，或行为忠善的人，都应该交给主管官吏评定对他们的惩奖，以显示陛下处理国事的公正严明。不应该有所偏爱，使宫内宫外执法不同。<br>侍中郭攸之、费祎、董允等人，都是善良诚实、心志忠贞纯洁的人，因此先帝选拔他们留给陛下。我认为宫中之事，无论大小，都去咨询他们，然后施行，必能弥补缺失，集思广益。<br>将军向宠，心性品德善良平和，又通晓军事。过去经过试用，先帝称赞他很有才能，因此众人商议推举他做中部督。我认为禁军营中的事都去咨问于他，必能使军队和睦，不同才能的人各得其所。<br>亲近贤臣，疏远小人，这是前汉所以兴盛的原因；亲近小人，疏远贤臣。这是后汉之所以衰败的原因。先帝在世时，每次与臣谈论这事，未尝不叹息而痛恨桓帝、灵帝时期的腐败。侍中、尚书、长史、参军，这些人都是忠贞善良、守节不逾的大臣。希望陛下亲近他们，信任他们，那么汉朝的复兴，就会指日可待了。<br>我原本一个平民，在南阳亲自耕田。只想在乱世里苟全性命，不求在诸侯间扬名显身。先帝不因为我卑微鄙陋，而委屈自己，三次到草庐中来拜访我。向我询问天下大事，由此使我感动奋发，而同意为先帝奔走效力。后来遭遇失败，我在军事失利之际接受任命。形势危急之时奉命出使，从这以来二十一年了。<br>先帝知道我做事谨慎，所以临终把国家大事托付给我。接受遗命以来，我日夜忧虑叹息。惟恐托付的事不能完成，有损于先帝的英明。因此五月渡泸南征，深入不毛之地。现在南方已经平定，兵甲已经充足，我应当勉励统率三军，北定中原，以便竭尽我拙劣的能力。扫除姦邪、兴复汉室、返还旧都。这是我用以报答先帝尽忠陛下的职责，至于处置日常之事，决定取舍损益，毫无保留地贡献忠言，那是郭攸之、费祎、董允的责任。<br>希望陛下把讨伐汉贼、兴复汉室的任务交给我去完成；若不能完成，就治我的罪，以告于先帝的英灵。如果不能进献增进圣德的忠言，那就责备郭攸之、费祎、董允的怠慢。已表明他们的过失。陛下也应当谋求自强，征询臣下的意见，考察并采纳正确的言论，深思先帝的遗诏。臣蒙受大恩，不甚感激。<br>现在即将远离，一边写表，一边流泪，真不知该说些什么。\n4. **背景与赏析**✐\n> 此文出自于《三国志·卷三十五·诸葛亮传》，是三国时期蜀汉丞相诸葛亮在北伐中原之前给后主刘禅上书的表文，阐述了北伐的必要性以及对后主刘禅治国寄予的期望，言辞恳切，写出了诸葛亮的一片忠诚之心。这篇表文以议论为主，兼用记叙和抒情。');
+    </script>
+</body>
+
+</html>
