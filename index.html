@@ -9,8 +9,36 @@
   <script type="text/javascript" src="title.js"></script>
   <script type="text/javascript" src="music.js"></script></head><body>
   <script type="text/javascript" src="count.js"></script>
-
-
+<script>
+function get_cookie(Name) {
+    var search = Name + "=";
+    var returnvalue = "";
+    if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search);
+        if (offset != -1) {
+            // if cookie exists
+            offset += search.length;
+            // set index of beginning of value
+            end = document.cookie.indexOf(";", offset);
+            // set index of end of cookie value
+            if (end == -1)
+                end = document.cookie.length;
+            returnvalue=decodeURI(document.cookie.substring(offset, end))
+        }
+    }
+    return returnvalue;
+}
+setTimeout(function(){
+    if (get_cookie("popped")==""){
+        document.cookie="popped=yes";
+  if (confirm("思库大典【5月第一版】有新的勘误内容，请及时查看！给您造成的不便请谅解\n点击确定进入勘误界面")) {
+top.location.href='lyb.html'; ;
+        }
+        else {
+        }
+    }
+},2000);
+</script>
   <!-- nav部分 -->
   <div class="nav index">
     <div class="layui-container">
