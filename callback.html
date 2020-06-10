@@ -1,5 +1,20 @@
 <head>
+	
 </head>
-<body>
-Please copy this.
+	<body>
+请拷贝以下字符串回到捷径.
+ <h1 id="code">如果您看到这条消息,说明授权失败!</h1>
+ <script>
+ 	function GetQueryString(name) { 
+ 	  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+ 	  var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+ 	  var context = ""; 
+ 	  if (r != null) 
+ 	     context = r[2]; 
+ 	  reg = null; 
+ 	  r = null; 
+ 	  return context == null || context == "" || context == "undefined" ? "" : context; 
+ 	};
+ 	document.getElementById("code").innerHTML = GetQueryString("code")
+ </script>
 </body>
