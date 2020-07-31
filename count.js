@@ -5,7 +5,7 @@ function countdown(){
     //获取服务器当前时间 var today=new Date($.ajax({type:"HEAD",async:false,cache:false}).getResponseHeader("Date"));
     //当前距离1970年的毫秒数
     var oldTime = today.getTime();
-    var newDate = new Date(2020,6,23,09,00,0); 
+    var newDate = new Date(2020,8,5,09,00,0); 
     //截止时间距离1970年的毫秒数
     var newTime = newDate.getTime();
     
