@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="cache-control"content="no-cache"/>
+	<meta content="yes"name="apple-touch-fullscreen">
+	<meta content="yes"name="apple-mobile-web-app-capable">
+	<meta content="black"name="apple-mobile-web-app-status-bar-style">
+	<meta name="apple-mobile-web-app-capable"content="yes">
+	<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ftp.bmp.ovh/imgs/2020/05/d9384103e3ec7d39.png" />
+
+<script>
+	var now = new Date();
+	var year = now.getFullYear(); //得到年份
+	var month = now.getMonth();//得到月份
+	var date = now.getDate();//得到日期
+	var day = now.getDay();//得到周几
+	var hour = now.getHours();//得到小时
+	var minu = now.getMinutes();//得到分钟
+	var sec = now.getSeconds();//得到秒
+
+	var daypass= (hour*60+minu)*60+sec;//计算剩余秒数
+	var dayleft=86400-daypass;
+
+	var weekpass=parseInt(now.getDay());
+if(weekpass==0)weekpass=7
+	var weekleft=7-weekpass;
+
+	var monthend=new Date(now.getMonth()+'/'+'1'+'/'+now.getFullYear());monthend.setMonth(now.getMonth()+1);
+	mleft = parseInt(Math.abs(monthend - now) / 1000 / 60 / 60 / 24);
+	mdays=mleft+parseInt(now.getDate());
+
+	var yearend=new Date('1'+'/'+'1'+'/'+now.getFullYear());yearend.setFullYear(now.getFullYear()+1);console.log()
+	yleft = parseInt(Math.abs(yearend - now) / 1000 / 60 / 60 / 24);
+	var yearst=new Date('1'+'/'+'1'+'/'+now.getFullYear());
+	ydays = parseInt(Math.abs(yearend - yearst) / 1000 / 60 / 60 / 24);
+	
+	var ppt=1-(yleft/ydays);
+	ppt-=0.00001;
+	document.documentElement.style.setProperty('--ppt',ppt);
+	var i=Math.floor(ppt*4);
+	pcolor1=["#388e3c","#1e88e5","#f4511e","#dd2c00"];
+	document.documentElement.style.setProperty('--pcolor',pcolor1[i]);
+
+	var DayAngle=parseInt(daypass/86400*360)
+	var WeekAngle=parseInt(weekpass/7*360)
+	var MonthAngle=parseInt((mdays-mleft)/mdays*360)
+	console.log(DayAngle+" "+WeekAngle+" "+MonthAngle)
+	
+</script>
+<title>我的日子</title>
+	<!-- whole -->
+    <style>
+    :root{
+    	--weight:20px;
+		--pheight:100px;--pwidth:84vw;--ppt:0.1;
+		/* ppt为进度百分比 */
+		--piwidth:calc(var(--pwidth) * var(--ppt));
+		--pcolor:#f4511e;
+    	--color1:#fa114f;--color2:#92e82a;--color3:#1eeaef; 
+    }
+    *{
+    margin: 0; padding: 0;
+    font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    body {
+    	background-color:black;
+    }
+    .ring-body{
+    	transition-duration: var(--test2);
+    	top: 3%;left: 3%;
+    	width:100%;
+    	position: fixed;
+    	z-index: -1;
+    }
+	</style>
+	<!-- cirle1 -->
+	<style type="text/css">
+    .wrap{
+    	top: 3%;left: 3%;
+    	display: inline-block;
+	    position: absolute;
+	    width: 200px;
+		height: 200px;
+		text-align: center;
+		
+    }
+    </style>
+	<!-- else -->
+    <style type="text/css">
+    .fix1{
+    	z-index: 100;
+    	position: relative;
+    	right: 8%;
+    	height: 20px;
+    	text-align: right;
+    	color:white;
+    	font-size: 0.95em;
+    }
+    .days{
+    	z-index: 100;
+    	position: relative;
+    	right: 8%;
+    	text-align: right;
+    	color:white;
+    	font-size: 0.95em;
+    	
+    }
+    </style>
+	<!-- prograssbar -->
+	<style>
+	.prograss-bar{
+    	display: inline-block;
+	    position: absolute;
+		top: 250px;
+	    width: 100%;
+		height: var(--pheight);
+		text-align: left;
+	}
+	.pouter,.pinner{
+		left: calc(3% + var(--weight) / 2);
+	}
+	.pouter{
+		position:absolute;
+		width: var(--pwidth);
+		height: var(--weight);
+		border: none;
+		padding: 0;
+		margin-right: 0;
+		border-radius: 0;
+		background-color: var(--pcolor);
+		opacity: 0.3;
+	}
+	.pouter::before{
+		content: '';
+		position: absolute;
+		display: block;
+		width: var(--weight);
+		height: var(--weight);
+		box-sizing: border-box;
+		top: 0;
+		left: calc(var(--weight) * -0.5);
+		border: 0 solid var(--color1);
+		border-right: transparent;
+		border-radius:  100%;
+		z-index: 2;
+		background-color: var(--pcolor);
+	}
+	.pouter::after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: var(--weight);
+		height: var(--weight);
+		box-sizing: border-box;
+		top: 0;
+		left: calc(var(--pwidth) - var(--weight) / 2);
+		border: 0 solid var(--color1);
+		border-right: transparent;
+		border-radius:  100%;
+		z-index: 2;
+		background-color: var(--pcolor);
+	}
+
+	.pinner{
+		--piw:0px;
+		position:absolute;
+		top:0;
+		width: var(--piw);
+		height: var(--weight);
+		border: none;
+		border-radius: 0;
+		background-color: var(--pcolor);
+		animation: 1s growbar ease forwards;
+	}
+	.pinner::before{
+		content: '';
+		position: absolute;
+		display: block;
+		width: var(--weight);
+		height: var(--weight);
+		box-sizing: border-box;
+		top: 0;
+		left: calc(var(--weight) * -0.5);
+		border: 0 solid var(--color1);
+		border-right: transparent;
+		border-radius:  100%;
+		z-index: 2;
+		background-color: var(--pcolor);
+	}
+	.pinner::after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: var(--weight);
+		height: var(--weight);
+		box-sizing: border-box;
+		top: 0;
+		left: calc(var(--piw) - var(--weight) / 2);
+		border: 0 solid var(--color1);
+		border-right: transparent;
+		border-radius:  100%;
+
+		background-color: var(--pcolor);
+		animation: 1s growbar-af ease forwards;
+	}
+
+	.years{
+		position: relative;
+		right: 8%;
+		top: -20px;
+		font-size: 0.95em;
+		color: white;
+	}
+	.years strong{
+		font-size: 2.25em;
+		color: var(--pcolor);
+	}
+
+	@keyframes growbar {
+		0%{
+			width: 0;
+		}
+
+		100%{
+			width: var(--piwidth);
+		}
+	}
+	@keyframes growbar-af {
+		0%{
+			left: calc(var(--piw) - var(--weight) / 2);
+		}
+
+		100%{
+			left: calc(var(--piwidth) - var(--weight) / 2);
+		}
+	}
+	</style>
+	<!-- content -->
+    <style type="text/css">
+    .fix{
+    	width: 100%;
+    	height: calc(var(--pheight) + 220px);
+		z-index: 9;
+    	opacity: 0;
+    }
+	.content{
+		overflow-y: hidden;
+		background-color: #efeff2;
+		z-index: 999;
+		width: 100%;
+		min-height: 60vh;
+		border-radius: 10px 10px 0 0;
+		box-shadow: 0 0 10px rgba(95,95,95,.48);
+	}
+	.content .title{
+		text-align:center;
+		padding-top: 5px;  
+		padding-left: 10px;
+		font-size: 1em;
+		font-weight: bold;
+	}
+	ul{
+		padding:10px;
+		position: inherit;
+		opacity: 0;
+		animation: 1s ul-show linear;
+		animation-fill-mode: forwards;
+
+	}
+	ul li{
+		list-style: none;
+		padding:10px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		height: 80px;
+		border: 1px solid rgba(200,200,200,0.5);
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(95,95,95,.48);
+	}
+	.li-left{
+		position: relative;
+		text-align:left;
+		color: white;
+		left: 0px;
+		top: 58px;
+	}
+	.li-right{
+		position: relative;
+		text-align:right;
+		color: white;
+		right: 0px;
+		top: 8px;
+	}
+	.li-left strong{
+		color: white;
+	}
+	.li-right strong{
+		font-size: 40px;
+		color: white;
+	}
+
+	.footer{
+		padding: 0;
+		margin: 0;
+		border: none;
+		overflow-y: hidden;
+		background-color: #efeff2;
+		z-index: 999;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		font-size: 8px;
+		color: gray;
+	}
+
+	@keyframes ul-show{
+		0%{
+		top: -100px;
+		opacity: 0;
+		}
+		100%{
+		top: 0;
+		opacity: 1;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div class="ring-body">
+		<div class="wrap">
+			<canvas id="myCanvas" width="400" height="400" style="zoom:0.5"></canvas>
+			<script>
+			  var canvas = document.getElementById('myCanvas')
+
+			  function ring(R1,r1,Target1,color1,canvas1){
+			  var P=Math.PI
+			  var angle=0
+			  this.R=R1
+			  this.r=r1
+			  this.color=color1
+			  this.canvas=canvas1
+			  this.Target=Target1
+			  var R=this.R
+			  var r=this.r
+			  var color=this.color
+			  var Target=this.Target
+			  var canvas=this.canvas
+			  var context = canvas.getContext('2d');
+			  var A=canvas.width/2
+			  var B=canvas.height/2
+			  this.drawRing=function(){
+				  if(angle>=Target){
+					window.clearRequestAnimationFrame(Id)
+				  }
+					  context.clearRect(0,0,800,800)
+					  var angleH=P/180*angle
+					  context.beginPath()
+					  context.lineWidth=r+4
+					  context.strokeStyle='#64071f'
+					  context.moveTo(B,A-R-r/2)
+					  context.arc(B,A,R+r/2,1.5*P,P*3.5)
+					  context.stroke()
+
+					  context.beginPath()
+					  context.lineWidth=r+4
+					  context.strokeStyle='#3a5d11'
+					  context.moveTo(B,A-100-40/2)
+					  context.arc(B,A,100+40/2,1.5*P,P*3.5)
+					  context.stroke()
+
+					  context.beginPath()
+					  context.lineWidth=r+4
+					  context.strokeStyle='#0c5d5f'
+					  context.moveTo(B,A-50-40/2)
+					  context.arc(B,A,50+40/2,1.5*P,P*3.5)
+					  context.stroke()
+
+					  context.fillStyle='#fa114f'
+					  context.strokeStyle='#fa114f'
+					  context.lineWidth=1
+					  context.beginPath()
+					  context.moveTo(B,A-R)
+					  context.arc(B,A-R-r/2,r/2,P*0.5,P*1.5,false)
+					  context.arc(B,A,R+r,P*1.5,P*1.5+angleH,false)
+					  context.arc(B+Math.sin(angleH)*(R+r/2),A-Math.cos(angleH)*(R+r/2),r/2,angleH-P*0.5,P*0.5+angleH,false)
+					  context.arc(B,A,R,P*1.5+angleH,P*1.5,true)
+					  context.stroke()
+					  context.fill()
+
+					  
+					  if(angle<Target/2)angle+=angle/5+0.1
+					  else angle+=(Target-angle)*0.1
+					  var Id=window.requestAnimationFrame(arguments.callee)
+				}
+			  }
+			  function ring2(R1,r1,Target1,color1,canvas1){
+			  var P=Math.PI
+			  var angle=0
+			  this.R=R1
+			  this.r=r1
+			  this.color=color1
+			  this.canvas=canvas1
+			  this.Target=Target1
+			  var R=this.R
+			  var r=this.r
+			  var color=this.color
+			  var Target=this.Target
+			  var canvas=this.canvas
+			  var context = canvas.getContext('2d');
+			  var A=canvas.width/2
+			  var B=canvas.height/2
+			  this.drawRing=function(){
+				  if(angle>=Target){
+					window.clearRequestAnimationFrame(Id)
+				  }
+					  //context.clearRect(0,0,800,800)
+					  //context.clearRect(0,0,800,800)
+					//   var angleH=P/180*angle
+					//   context.beginPath()
+					//   context.lineWidth=r +4
+					//   context.strokeStyle='#3a5d11'
+					//   context.moveTo(B,A-R-r/2)
+					//   context.arc(B,A,R+r/2,1.5*P,P*3.5)
+					//   context.stroke()
+
+					  var angleH=P/180*angle
+					  context.fillStyle='#92e82a'
+					  context.strokeStyle='#92e82a'
+					  context.beginPath()
+					  context.moveTo(B,A-R)
+					  context.arc(B,A-R-r/2,r/2,P*0.5,P*1.5,false)
+					  context.arc(B,A,R+r,P*1.5,P*1.5+angleH,false)
+					  context.arc(B+Math.sin(angleH)*(R+r/2),A-Math.cos(angleH)*(R+r/2),r/2,angleH-P*0.5,P*0.5+angleH,false)
+					  context.arc(B,A,R,P*1.5+angleH,P*1.5,true)
+					  context.stroke()
+					  context.fill()
+					  if(angle<Target/2)angle+=angle/5+0.1
+					  else angle+=(Target-angle)*0.1
+					  var Id=window.requestAnimationFrame(arguments.callee)
+				}
+			  }
+			  function ring3(R3,r3,Target3,color3,canvas3){
+			  var P=Math.PI
+			  var angle=0
+			  this.R=R3
+			  this.r=r3
+			  this.color=color3
+			  this.canvas=canvas3
+			  this.Target=Target3
+			  var R=this.R
+			  var r=this.r
+			  var color=this.color
+			  var Target=this.Target
+			  var canvas=this.canvas
+			  var context = canvas.getContext('2d');
+			  var A=canvas.width/2
+			  var B=canvas.height/2
+			  this.drawRing=function(){
+				  if(angle>=Target){
+					window.clearRequestAnimationFrame(Id)
+				  }
+					  //context.clearRect(0,0,800,800)
+					  //context.clearRect(0,0,800,800)
+					//   var angleH=P/180*angle
+					//   context.beginPath()
+					//   context.lineWidth=r+4
+					//   context.strokeStyle='#0c5d5f'
+					//   context.moveTo(B,A-R-r/2)
+					//   context.arc(B,A,R+r/2,1.5*P,P*3.5)
+					//   context.stroke()
+
+					  var angleH=P/180*angle
+					  context.fillStyle='#1eeaef'
+					  context.strokeStyle='#1eeaef'
+					  context.beginPath()
+					  context.moveTo(B,A-R)
+					  context.arc(B,A-R-r/2,r/2,P*0.5,P*1.5,false)
+					  context.arc(B,A,R+r,P*1.5,P*1.5+angleH,false)
+					  context.arc(B+Math.sin(angleH)*(R+r/2),A-Math.cos(angleH)*(R+r/2),r/2,angleH-P*0.5,P*0.5+angleH,false)
+					  context.arc(B,A,R,P*1.5+angleH,P*1.5,true)
+					  context.stroke()
+					  context.fill()
+					  if(angle<Target/2)angle+=angle/5+0.1
+					  else angle+=(Target-angle)*0.1
+					  var Id=window.requestAnimationFrame(arguments.callee)
+				}
+			  }
+			  
+			  var ring=new ring(150,40,DayAngle,'#fa114f',canvas)
+			  var ring2=new ring2(100,40,WeekAngle,'#92e82a',canvas)
+			  var ring3=new ring3(50,40,MonthAngle,'#1eeaef',canvas)
+			  ring.drawRing()
+			  ring2.drawRing()
+			  ring3.drawRing()
+			 
+			</script>
+		</div>
+
+		<div class="fix1"></div>
+		<p class="days">时间在流逝：</p>
+		<p class="days" id="p1"><span>今年还有</span><strong style="color: var(--pcolor);font-size: 2.25em;">365</strong>天</p>
+		<p class="days" id="p2"><span>本周剩余</span><strong style="color: var(--color2);font-size: 2.25em;">4</strong>/7天</p>
+		<p class="days" id="p3"><span>本月剩余</span><strong style="color: var(--color3);font-size: 2.25em;">10</strong><span>/30</span>天</p>
+		<p class="days" id="p4"><span>今日还剩下</span><strong  id="sec" style="color: var(--color1); font-size:2.5em;">86400</strong>秒</p>
+
+		<div class="prograss-bar">
+			<div class="pouter"></div>
+			<div class="pinner"></div>
+		</div>
+	</div>
+	
+	<div class="fix"></div>
+	<div class="content" id="all-content">
+<p class="title" id='title1'>临近日程</p>
+		<ul id="cal_list">
+		</ul>
+<p class="title" id='title2'>我的日子</p>
+		<ul id="my_list">
+		</ul>
+
+</body>
+<script>
+var NUM=2
+var CalDays='儿童节/2020年06月01日 00:00:00;父亲节/2020年06月21日 00:00:00;夏至/2020年06月21日 00:00:00;端午节/2020年06月25日 00:00:00;建党节/2020年07月01日 00:00:00;建军节/2020年08月01日 00:00:00;七夕节/2020年08月25日 00:00:00;中元节/2020年09月02日 00:00:00;教师节/2020年09月10日 00:00:00;秋分/2020年09月22日 00:00:00;国庆节/2020年10月01日 00:00:00;中秋节/2020年10月01日 00:00:00;重阳节/2020年10月25日 00:00:00;冬至/2020年12月21日 00:00:00;圣诞节/2020年12月25日 00:00:00'
+var MyDays='这段感情/2020年8月10日 09:00/否'
+
+var cals=CalDays.split(';')
+var cal_list=document.getElementById("cal_list")
+var cal_start=-1
+for(var i=0;i<cals.length;i++){
+	if(cals[i] && getDayDate(cals[i])<=0){cal_start=i;break}
+}
+if(cal_start!=-1)
+{
+	for(i=cal_start;i<cal_start+NUM;i++){
+	 if(Math.abs(getDayDate(cals[i]))==0){
+			var li='<li><div class="li-left">今天是<strong>'+getDayName(cals[i])+'<\/strong><\/div><div class="li-right"><strong>'+'<\/strong><\/div><\/li>'
+			cal_list.innerHTML+=li
+		}
+		else{
+			var li='<li><div class="li-left">距离<strong>'+getDayName(cals[i])+'<\/strong>还有<\/div><div class="li-right"><strong>'+Math.abs(getDayDate(cals[i]))+'<\/strong>天<\/div><\/li>'
+			cal_list.innerHTML+=li
+				}
+	}
+}else{
+	document.getElementById('title1').innerHTML='暂无临近日程'
+}
+
+var mys=MyDays.split(';')
+var my_list=document.getElementById("my_list")
+mys.forEach(item => {
+	if(item){
+		 if(getDayDate(item)>0)var x='持续了'
+		else var x='还有'
+		var li='<li><div class="li-left"><strong>'+getDayName(item)+'<\/strong>'+x+'<\/div><div class="li-right"><strong>'+Math.abs(getDayDate(item))+'<\/strong>天<\/div><\/li>'
+		my_list.innerHTML+=li
+	}else{
+		document.getElementById('title2').innerHTML='暂无我的日子'
+	}
+});
+
+function getDayName(str){
+	if(str){
+		return str.split("/")[0]
+	}
+	else return null
+}
+function getDayDate(str){
+	if(str){
+		var date=str.split("/")[1].toString()
+		if (date.indexOf("年")!=-1){
+			date=date.replace('年','/').replace('月','/').replace('日','').replace('上午','').replace("下午","")
+			console.log(date)
+			var now=new Date()
+			date=new Date(date)
+			
+			return Math.floor(((now.getTime()-date.getTime()))/(24*3600*1000))
+		}
+		else {
+			var now=new Date()
+			date1=new Date(now.getFullYear()+'/'+date.replace('月','/').replace('日','').replace('上午','').replace("下午",""))
+			date2=new Date(parseInt(now.getFullYear()+1)+'/'+date.replace('月','/').replace('日','').replace('上午','').replace("下午",""))
+			console.log(date1+" "+date2)
+			var d1=parseInt(((now.getTime()-date1.getTime()))/(24*3600*1000))
+			var d2=parseInt(((now.getTime()-date2.getTime()))/(24*3600*1000))
+			console.log(d1+" "+d2)
+			if(d1>0)return d2
+			else return d1
+		}
+	}else return null
+}
+
+</script>
+
+<script type="text/javascript">
+
+	var lefts=document.getElementsByClassName("li-left");
+	for (let j = 0; j < lefts.length; j++) {
+		var lcontents=lefts[j].getElementsByTagName("strong");
+		if(lcontents[0].innerHTML.length>10)
+		lcontents[0].innerHTML=lcontents[0].innerHTML.substring(0,10);
+		//console.log(lcontents[0].innerHTML)
+			
+	}
+
+	var level=[0,10,30,60,100,365,500,1000];
+	var colors=["#00838F","#00695C","#2E7D32","#558B2F","#9E9D24","#F9A825","#FF8F00","#EF6C00"];
+	var mystyle='backgroundColor'
+
+	var all=document.getElementById("all-content");
+	var ul=all.getElementsByTagName('ul');
+	var li=document.getElementsByTagName('li');
+	var lis=Array.from(li);
+	lis.forEach(setbgcolor);
+	function setbgcolor(e,index){
+		var strongs=li[index].getElementsByTagName("strong");
+		var nums=strongs[1];
+		var num=parseInt(nums.innerHTML);
+		var i=0;
+		var l=colors.length-1;
+		for(i=0;i<level.length;i++){
+			if(num>=level[i] && num<level[i+1]){l=i;break;}
+		}
+		if(mystyle=='backgroundColor'){li[index].style.backgroundColor =colors[l];}
+		else {li[index].style.backgroundImage =colors[l];}
+	}
+
+	var frontmsg1=["今年还有","本周剩余","本月剩余","今日还剩下"];
+	var frontmsg2=["今年已过","本周已过","本月已过","今日已过了"];
+	var timeflag;
+	showleft();
+	var boool=true;
+	document.getElementsByClassName("fix")[0].onclick=function(){
+		boool=!boool;
+		clearInterval(timeflag)
+		if(boool){
+			showleft();
+		}else{
+			showpass();
+		}
+	}
+	
+	var dayleft1=dayleft;
+	var daypass1=daypass;
+	setInterval(function(){
+		var seconds=document.getElementById("sec");
+		dayleft1=dayleft1-1;
+		daypass1=daypass1+1
+		if(boool){seconds.innerHTML=parseInt(dayleft1);}
+		else {seconds.innerHTML=parseInt(daypass1);}
+	},'1000')
+
+
+	function showpass(){
+		document.getElementById("p1").getElementsByTagName("strong")[0].innerHTML=parseInt(ydays-yleft);
+		document.getElementById("p1").getElementsByTagName("span")[0].innerHTML=frontmsg2[0];
+		
+		document.getElementById("p2").getElementsByTagName("strong")[0].innerHTML=weekpass;
+		document.getElementById("p2").getElementsByTagName("span")[0].innerHTML=frontmsg2[1];
+
+		document.getElementById("p3").getElementsByTagName("strong")[0].innerHTML=parseInt(mdays-mleft);
+		document.getElementById("p3").getElementsByTagName("span")[0].innerHTML=frontmsg2[2];
+		document.getElementById("p3").getElementsByTagName("span")[1].innerHTML="/"+mdays;
+		
+		document.getElementById("p4").getElementsByTagName("span")[0].innerHTML=frontmsg2[3];
+		document.getElementById("p4").getElementsByTagName("strong")[0].innerHTML=parseInt(daypass);
+	}
+
+	function showleft(){
+		document.getElementById("p1").getElementsByTagName("strong")[0].innerHTML=yleft;
+		document.getElementById("p1").getElementsByTagName("span")[0].innerHTML=frontmsg1[0];
+		
+		document.getElementById("p2").getElementsByTagName("strong")[0].innerHTML=weekleft;
+		document.getElementById("p2").getElementsByTagName("span")[0].innerHTML=frontmsg1[1];
+
+		document.getElementById("p3").getElementsByTagName("strong")[0].innerHTML=mleft;
+		document.getElementById("p3").getElementsByTagName("span")[0].innerHTML=frontmsg1[2];
+		document.getElementById("p3").getElementsByTagName("span")[1].innerHTML="/"+mdays;
+		
+		document.getElementById("p4").getElementsByTagName("span")[0].innerHTML=frontmsg1[3];
+		document.getElementById("p4").getElementsByTagName("strong")[0].innerHTML=dayleft;
+	}
+</script>
+</html>
