@@ -35,9 +35,7 @@
 			setTimeout(function() {
 				if (get_cookie("popped") == "") {
 					document.cookie = "popped=yes";
-					if (confirm("思库大典【5月第一版】有新的勘误内容，请及时查看！给您造成的不便请谅解\n点击确定进入勘误界面")) {
-						top.location.href = 'lyb.html';;
-					} else {}
+					
 				}
 			}, 2000);
 		</script>
@@ -56,7 +54,9 @@
 					</button>
 					<ul class="layui-nav" lay-filter="">
 						<li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
-						<li class="layui-nav-item"><a href="https://skwebsite.imfast.io/">思库大典＃预览</a></li>
+						<li class="layui-nav-item layui-this">
+							<a href="YCmath.html">洋葱数学</a>
+						</li>
 						<li class="layui-nav-item"><a href="shortcut.html">IOS捷径</a></li>
 						<li class="layui-nav-item"><a href="gsw.html">查古诗文</a></li>
 						<li class="layui-nav-item"><a href="lyb.html">反馈与勘误</a></li>
@@ -72,7 +72,7 @@
 					<div class="layui-this">
 						<img src="https://ae01.alicdn.com/kf/H91cea27e97d646bab1bd13204bab62dek.jpeg">
 						<div class="panel">
-							<p class="title">2020中考</p>
+							<p class="title">2020新高一</p>
 							<h1 id="zkdjs">Loading...</h1>
 						</div>
 					</div>
