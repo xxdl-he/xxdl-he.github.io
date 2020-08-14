@@ -2,7 +2,7 @@
 var a_idx = 0; 
 var b_idx = 0; 
 
-var a = new Array("🐍", "蛇", "中考", "加油", "You 2 my arithmetic square root", "贰伍", "壹陆" ,"叁壹", "贰玖", "贰捌", "零陆", "叁伍","你老是点我干🐎？","叁捌","噗嗤噗嗤","Full Marks"); 
+var a = new Array("🐍", "蛇", "桂中", "加油", "You 2 my ASR", "贰伍", "壹陆" ,"叁壹", "贰玖", "贰捌", "零陆", "叁伍","你老是点我干🐎？","叁捌","噗嗤噗嗤","Full Marks"); 
 var b = new Array("#FF0000","#FF7F00"," #FFFF00","#00FF00","#00FFFF","#0000FF","#8B00FF","#FF0000","#FF7F00"," #FFFF00","#00FF00","#00FFFF","#0000FF","#8B00FF");
 jQuery(document).ready(function($) { 
     $("body").click(function(e) { 
