@@ -25,7 +25,7 @@
 
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
-/* Reset */
+
 *,
 *:after,
 *:before {
@@ -58,18 +58,18 @@ body{
 
 .bgcolor-1 { background: #f0efee; }
 .bgcolor-2 { background: #f9f9f9; }
-.bgcolor-3 { background: #e8e8e8; }/*light grey*/
-.bgcolor-4 { background: #2f3238; color: #fff; }/*Dark grey*/
-.bgcolor-5 { background: #df6659; color: #521e18; }/*pink1*/
-.bgcolor-6 { background: #2fa8ec; }/*sky blue*/
-.bgcolor-7 { background: #d0d6d6; }/*White tea*/
-.bgcolor-8 { background: #3d4444; color: #fff; }/*Dark grey2*/
-.bgcolor-9 { background: #ef3f52; color: #fff;}/*pink2*/
-.bgcolor-10{ background: #64448f; color: #fff;}/*Violet*/
-.bgcolor-11{ background: #3755ad; color: #fff;}/*dark blue*/
-.bgcolor-12{ background: #3498DB; color: #fff;}/*light blue*/
+.bgcolor-3 { background: #e8e8e8; }
+.bgcolor-4 { background: #2f3238; color: #fff; }
+.bgcolor-5 { background: #df6659; color: #521e18; }
+.bgcolor-6 { background: #2fa8ec; }
+.bgcolor-7 { background: #d0d6d6; }
+.bgcolor-8 { background: #3d4444; color: #fff; }
+.bgcolor-9 { background: #ef3f52; color: #fff;}
+.bgcolor-10{ background: #64448f; color: #fff;}
+.bgcolor-11{ background: #3755ad; color: #fff;}
+.bgcolor-12{ background: #3498DB; color: #fff;}
 .bgcolor-20{ background: #494A5F;color: #D5D6E2;}
-/* Header */
+
 .htmleaf-header{
 	padding: 1em 190px 1em;
 	letter-spacing: -1px;
@@ -90,7 +90,7 @@ body{
 	padding: 0.8em 0 0.5em 0;
 	color: #c3c8cd;
 }
-/*nav*/
+
 .htmleaf-demo a{color: #fff;text-decoration: none;}
 .htmleaf-demo{width: 100%;padding-bottom: 1.2em;}
 .htmleaf-demo a{display: inline-block;margin: 0.5em;padding: 0.6em 1em;border: 3px solid #fff;font-weight: 700;}
@@ -141,11 +141,11 @@ body{
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }
-/* footer */
+
 .htmleaf-footer{width: 100%;padding-top: 10px;}
 .htmleaf-small{font-size: 0.8em;}
 .center{text-align: center;}
-/****/
+
 .related {
 	color: #fff;
 	background: #494A5F;
@@ -198,7 +198,7 @@ body{
 	margin-top: 0.15em;
 	color: #fff;
 }
-/* icomoon */
+
 .icon-htmleaf-home-outline:before {
 	content: "\e5000";
 }

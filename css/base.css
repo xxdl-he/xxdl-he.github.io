@@ -70,7 +70,7 @@ body {
 	--color-info: #E2173C;
 }
 
-/* Page Loader */
+
 .js .loading::before,
 .js .loading::after {
 	content: '';

@@ -3,10 +3,10 @@ body {
 }
 
 
-/** 首页 */
 
 
-/*导航部分*/
+
+
 
 .nav {
 	width: 100%;
@@ -114,7 +114,7 @@ body {
 }
 
 
-/*轮播*/
+
 
 #banner img {
 	min-width: 100%;
@@ -144,7 +144,7 @@ body {
 }
 
 
-/*主体—产品*/
+
 
 .main-product {
 	padding-top: 90px;
@@ -204,7 +204,7 @@ body {
 }
 
 
-/*主体-服务*/
+
 
 .main-service {
 	background: #f8f8f8;
@@ -276,7 +276,7 @@ body {
 }
 
 
-/*底部*/
+
 
 .footer {
 	padding-bottom: 70px;
@@ -314,7 +314,7 @@ body {
 }
 
 
-/** 产品 */
+
 
 .banner {
 	height: 320px;
@@ -375,7 +375,7 @@ body {
 }
 
 
-/** 动态 */
+
 
 .banner.news {
 	background: url(../img/nav_img3.jpg) no-repeat center top;
@@ -469,7 +469,7 @@ body {
 }
 
 
-/*杂页*/
+
 
 .main-newsdate {
 	margin-top: 80px;
@@ -510,7 +510,7 @@ body {
 }
 
 
-/** 案例 */
+
 
 .banner.case {
 	background: url(../img/nav_img2.jpg) no-repeat center top;
@@ -577,7 +577,7 @@ body {
 }
 
 
-/** 个人介绍 */
+
 
 .banner.grjs {
 	background: url(../img/nav_grjs.jpg) no-repeat center top;
@@ -660,13 +660,13 @@ body {
 	counter-increment: sectioncounter;
 }
 
-/*课余生活*/
+
 .banner.xsh {
 	background: url(../img/nav_xsh.jpg) no-repeat center top;
 	background-size: cover;
 }
 
-/*学校*/
+
 .banner.xx {
 	background: url(../img/nav_xx.jpg) no-repeat center top;
 	background-size: cover;
@@ -684,13 +684,13 @@ body {
 	text-align: center;
 }
 
-/*职业规划*/
+
 .banner.zygh {
 	background: url(../img/nav_zygh.jpg) no-repeat center top;
 	background-size: cover;
 }
 
-/*VideoDemo*/
+
 .banner.lyb {
 	background: url(../img/nav_lyb.jpg) no-repeat center top;
 	background-size: cover;
@@ -700,7 +700,7 @@ body {
 	padding: 20px 0 0 0;
 	text-align: center;
 }
-/*小屏幕*/
+
 
 @media screen and (min-width: 768px) {
 	.nav {
@@ -821,7 +821,7 @@ body {
 }
 
 
-/*大屏幕*/
+
 
 @media screen and (min-width: 992px) {
 	.main.product .content {
@@ -854,7 +854,7 @@ body {
 }
 
 
-/*超大屏幕*/
+
 
 @media screen and (min-width: 1200px) {
 	.main-news .content .news-img {
