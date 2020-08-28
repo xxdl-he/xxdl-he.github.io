@@ -2,11 +2,10 @@ window.onload=countdown;
 function countdown(){
     //获取客户端时间
     var today=new Date();
-    //获取服务器当前时间 var today=new Date($.ajax({type:"HEAD",async:false,cache:false}).getResponseHeader("Date"));
     //当前距离1970年的毫秒数
     var oldTime = today.getTime();
-    var newDate = new Date(2020,8,5,09,00,0); 
-    //截止时间距离1970年的毫秒数
+    var newDate = new Date(2023,5,6,9,00,0); 
+    //月数-1
     var newTime = newDate.getTime();
     
     //截止时间距离现在的秒数
